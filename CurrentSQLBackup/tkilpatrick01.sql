@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 20, 2021 at 01:02 PM
+-- Generation Time: Mar 20, 2021 at 01:06 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -59,7 +59,7 @@ CREATE TABLE `epl_api_users` (
 
 CREATE TABLE `epl_away_team_stats` (
   `AwayTeamStatID` int(11) NOT NULL,
-  `AwayClubID` int(11) NOT NULL,
+  `AwayClubName` varchar(100) NOT NULL,
   `MatchID` int(11) NOT NULL,
   `ATTotalGoals` int(11) NOT NULL,
   `ATHalfTimeGoals` int(11) NOT NULL,
@@ -91,7 +91,7 @@ CREATE TABLE `epl_clubs` (
 
 CREATE TABLE `epl_home_team_stats` (
   `HomeTeamStatID` int(11) NOT NULL,
-  `HomeClubID` int(11) NOT NULL,
+  `HomeClubName` varchar(100) NOT NULL,
   `MatchID` int(11) NOT NULL,
   `HTTotalGoals` int(11) NOT NULL,
   `HTHalfTimeGoals` int(11) NOT NULL,
@@ -111,10 +111,10 @@ CREATE TABLE `epl_home_team_stats` (
 
 CREATE TABLE `epl_matches` (
   `MatchID` int(11) NOT NULL,
-  `SeasonID` int(11) NOT NULL,
+  `SeasonYears` varchar(100) NOT NULL,
   `MatchDate` varchar(255) NOT NULL,
   `KickOffTime` varchar(255) DEFAULT NULL,
-  `RefereeID` int(11) NOT NULL,
+  `RefereeName` varchar(100) NOT NULL,
   `AddedByUserID` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -191,7 +191,7 @@ ALTER TABLE `epl_api_users`
 ALTER TABLE `epl_away_team_stats`
   ADD PRIMARY KEY (`AwayTeamStatID`),
   ADD KEY `fk_matchname` (`MatchID`),
-  ADD KEY `fk_awayclubid` (`AwayClubID`);
+  ADD KEY `fk_awayclubid` (`AwayClubName`);
 
 --
 -- Indexes for table `epl_clubs`
@@ -205,15 +205,15 @@ ALTER TABLE `epl_clubs`
 ALTER TABLE `epl_home_team_stats`
   ADD PRIMARY KEY (`HomeTeamStatID`),
   ADD KEY `fk_newmatchname` (`MatchID`),
-  ADD KEY `fk_clubId` (`HomeClubID`);
+  ADD KEY `fk_clubId` (`HomeClubName`);
 
 --
 -- Indexes for table `epl_matches`
 --
 ALTER TABLE `epl_matches`
   ADD PRIMARY KEY (`MatchID`),
-  ADD KEY `fk_referee` (`RefereeID`),
-  ADD KEY `fk_season` (`SeasonID`);
+  ADD KEY `fk_referee` (`RefereeName`),
+  ADD KEY `fk_season` (`SeasonYears`);
 
 --
 -- Indexes for table `epl_match_edits`
@@ -320,12 +320,6 @@ ALTER TABLE `epl_away_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
   ADD CONSTRAINT `fk_newmatchname` FOREIGN KEY (`MatchID`) REFERENCES `epl_matches` (`MatchID`);
-
---
--- Constraints for table `epl_matches`
---
-ALTER TABLE `epl_matches`
-  ADD CONSTRAINT `fk_season` FOREIGN KEY (`SeasonID`) REFERENCES `epl_seasons` (`SeasonID`);
 
 --
 -- Constraints for table `epl_match_edits`
