@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 03, 2021 at 12:51 PM
+-- Generation Time: Mar 05, 2021 at 12:37 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -31,6 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `epl_admins` (
   `AdminID` int(11) NOT NULL,
   `AdminName` varchar(100) NOT NULL,
+  `AdminSurname` varchar(100) NOT NULL,
   `AdminEmail` varchar(100) NOT NULL,
   `Password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -39,9 +40,9 @@ CREATE TABLE `epl_admins` (
 -- Dumping data for table `epl_admins`
 --
 
-INSERT INTO `epl_admins` (`AdminID`, `AdminName`, `AdminEmail`, `Password`) VALUES
-(50000, 'Tom Kilpatrick', 'tom7182@outlook.com', 'maindev'),
-(50001, 'John Busch', 'j.a.busch@qub.ac.uk', 'inspector');
+INSERT INTO `epl_admins` (`AdminID`, `AdminName`, `AdminSurname`, `AdminEmail`, `Password`) VALUES
+(50000, 'Tom', 'Kilpatrick', 'tom7182@outlook.com', 'tom'),
+(50001, 'John', 'Busch', 'j.a.busch@qub.ac.uk', 'inspector');
 
 -- --------------------------------------------------------
 
@@ -7925,7 +7926,7 @@ CREATE TABLE `epl_clubs` (
 --
 
 INSERT INTO `epl_clubs` (`ClubID`, `ClubName`, `ClubLogoURL`) VALUES
-(1, 'Charlton', 'https://i.imgur.com/qrayYVm.png'),
+(1, 'Charlton Athletic', 'https://i.imgur.com/qrayYVm.png'),
 (2, 'Manchester City', 'https://i.imgur.com/eAQYVvW.png'),
 (3, 'Chelsea', 'https://i.imgur.com/GHyIMJ0.jpg'),
 (4, 'West Ham', 'https://i.imgur.com/NnpKdv6.jpg'),
@@ -23703,7 +23704,7 @@ INSERT INTO `epl_referees` (`RefereeID`, `RefereeName`) VALUES
 (184, 'A. Wiley'),
 (186, 'S. Bennett'),
 (188, 'M. Riley'),
-(189, 'A. DUrso'),
+(189, 'A. Durso'),
 (190, 'P. Durkin'),
 (191, 'D. Gallagher'),
 (192, 'M. Messias'),
@@ -23788,8 +23789,7 @@ INSERT INTO `epl_seasons` (`SeasonID`, `SeasonYears`) VALUES
 (27, '2017-2018'),
 (28, '2018-2019'),
 (29, '2019-2020'),
-(30, '2020-2021'),
-(43, '2021-2022');
+(30, '2020-2021');
 
 --
 -- Indexes for dumped tables
@@ -23865,7 +23865,7 @@ ALTER TABLE `epl_seasons`
 -- AUTO_INCREMENT for table `epl_admins`
 --
 ALTER TABLE `epl_admins`
-  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50002;
+  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50012;
 
 --
 -- AUTO_INCREMENT for table `epl_api_access`
@@ -23877,25 +23877,25 @@ ALTER TABLE `epl_api_access`
 -- AUTO_INCREMENT for table `epl_away_team_stats`
 --
 ALTER TABLE `epl_away_team_stats`
-  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8828;
+  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8832;
 
 --
 -- AUTO_INCREMENT for table `epl_clubs`
 --
 ALTER TABLE `epl_clubs`
-  MODIFY `ClubID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `ClubID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `epl_home_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
-  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8839;
+  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8865;
 
 --
 -- AUTO_INCREMENT for table `epl_matches`
 --
 ALTER TABLE `epl_matches`
-  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8836;
+  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8858;
 
 --
 -- AUTO_INCREMENT for table `epl_match_edits`
@@ -23907,13 +23907,13 @@ ALTER TABLE `epl_match_edits`
 -- AUTO_INCREMENT for table `epl_referees`
 --
 ALTER TABLE `epl_referees`
-  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=261;
+  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=270;
 
 --
 -- AUTO_INCREMENT for table `epl_seasons`
 --
 ALTER TABLE `epl_seasons`
-  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- Constraints for dumped tables
