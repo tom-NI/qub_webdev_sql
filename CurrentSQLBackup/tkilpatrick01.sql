@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 17, 2021 at 02:18 PM
+-- Generation Time: Mar 17, 2021 at 02:21 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -23966,21 +23966,18 @@ ALTER TABLE `epl_site_users`
 -- Constraints for table `epl_away_team_stats`
 --
 ALTER TABLE `epl_away_team_stats`
-  ADD CONSTRAINT `fk_awayclubid` FOREIGN KEY (`AwayClubID`) REFERENCES `epl_clubs` (`ClubID`),
   ADD CONSTRAINT `fk_matchname` FOREIGN KEY (`MatchID`) REFERENCES `epl_matches` (`MatchID`);
 
 --
 -- Constraints for table `epl_home_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
-  ADD CONSTRAINT `fk_clubId` FOREIGN KEY (`HomeClubID`) REFERENCES `epl_clubs` (`ClubID`),
   ADD CONSTRAINT `fk_newmatchname` FOREIGN KEY (`MatchID`) REFERENCES `epl_matches` (`MatchID`);
 
 --
 -- Constraints for table `epl_matches`
 --
 ALTER TABLE `epl_matches`
-  ADD CONSTRAINT `fk_referee` FOREIGN KEY (`RefereeID`) REFERENCES `epl_referees` (`RefereeID`),
   ADD CONSTRAINT `fk_season` FOREIGN KEY (`SeasonID`) REFERENCES `epl_seasons` (`SeasonID`);
 
 --
