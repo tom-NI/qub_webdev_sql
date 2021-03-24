@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 17, 2021 at 12:19 PM
+-- Generation Time: Feb 17, 2021 at 01:02 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -7876,57 +7876,58 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubID`, `MatchID`, `A
 
 CREATE TABLE `epl_clubs` (
   `ClubID` int(11) NOT NULL,
-  `ClubName` varchar(255) NOT NULL
+  `ClubName` varchar(255) NOT NULL,
+  `ClubLogoURL` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `epl_clubs`
 --
 
-INSERT INTO `epl_clubs` (`ClubID`, `ClubName`) VALUES
-(1, 'Charlton'),
-(2, 'Man City'),
-(3, 'Chelsea'),
-(4, 'West Ham'),
-(5, 'Coventry'),
-(6, 'Middlesbrough'),
-(7, 'Derby'),
-(8, 'Southampton'),
-(9, 'Leeds'),
-(10, 'Everton'),
-(11, 'Leicester'),
-(12, 'Aston Villa'),
-(13, 'Liverpool'),
-(14, 'Bradford'),
-(15, 'Sunderland'),
-(16, 'Arsenal'),
-(17, 'Tottenham'),
-(18, 'Ipswich'),
-(19, 'Man United'),
-(20, 'Newcastle'),
-(21, 'Blackburn'),
-(22, 'Bolton'),
-(23, 'Fulham'),
-(24, 'West Brom'),
-(25, 'Birmingham'),
-(26, 'Wolves'),
-(27, 'Portsmouth'),
-(28, 'Norwich'),
-(29, 'Crystal Palace'),
-(30, 'Wigan'),
-(31, 'Watford'),
-(32, 'Reading'),
-(33, 'Sheffield United'),
-(34, 'Stoke'),
-(35, 'Hull'),
-(36, 'Burnley'),
-(37, 'Blackpool'),
-(38, 'QPR'),
-(39, 'Swansea'),
-(40, 'Cardiff'),
-(41, 'Bournemouth'),
-(42, 'Brighton'),
-(43, 'Huddersfield');
+INSERT INTO `epl_clubs` (`ClubID`, `ClubName`, `ClubLogoURL`) VALUES
+(1, 'Charlton', 'https://i.imgur.com/qrayYVm.png'),
+(2, 'Manchester City', 'https://i.imgur.com/eAQYVvW.png'),
+(3, 'Chelsea', 'https://i.imgur.com/GHyIMJ0.jpg'),
+(4, 'West Ham', 'https://i.imgur.com/NnpKdv6.jpg'),
+(5, 'Coventry', 'https://i.imgur.com/BGOfacM.jpg'),
+(6, 'Middlesbrough', 'https://i.imgur.com/9xxDgws.png'),
+(7, 'Derby', 'https://i.imgur.com/8Ke5eSv.jpg'),
+(8, 'Southampton', 'https://i.imgur.com/XItjdG1.png'),
+(9, 'Leeds', 'https://i.imgur.com/bWa76Vw.png'),
+(10, 'Everton', 'https://i.imgur.com/el9t4P0.png'),
+(11, 'Leicester', 'https://i.imgur.com/xPw5Zox.png'),
+(12, 'Aston Villa', 'https://i.imgur.com/mbmoHRB.png'),
+(13, 'Liverpool', 'https://i.imgur.com/VgDSAuj.jpg'),
+(14, 'Bradford', 'https://i.imgur.com/64vrD23.png'),
+(15, 'Sunderland', 'https://i.imgur.com/KusYi4e.png'),
+(16, 'Arsenal', 'https://i.imgur.com/rWUEXBS.png'),
+(17, 'Tottenham', 'https://i.imgur.com/en4oC8U.jpg'),
+(18, 'Ipswich', 'https://i.imgur.com/6RHmlrr.png'),
+(19, 'Manchester United', 'https://i.imgur.com/ocvI6Kk.jpg'),
+(20, 'Newcastle', 'https://i.imgur.com/J3U6Yic.jpg'),
+(21, 'Blackburn', 'https://i.imgur.com/IlLD2gZ.png'),
+(22, 'Bolton', 'https://i.imgur.com/6PbhKLp.png'),
+(23, 'Fulham', 'https://i.imgur.com/nFz6qgg.png'),
+(24, 'West Brom', 'https://i.imgur.com/3RICf5m.png'),
+(25, 'Birmingham', 'https://i.imgur.com/tShzx1R.png'),
+(26, 'Wolves', 'https://i.imgur.com/woiCzh9.png'),
+(27, 'Portsmouth', 'https://i.imgur.com/fWlIa6A.png'),
+(28, 'Norwich', 'https://i.imgur.com/v1jtOqI.png'),
+(29, 'Crystal Palace', 'https://i.imgur.com/FoHUZdk.png'),
+(30, 'Wigan', 'https://i.imgur.com/BzOqlOc.png'),
+(31, 'Watford', 'https://i.imgur.com/kn8zohR.png'),
+(32, 'Reading', 'https://i.imgur.com/2uF1BdJ.png'),
+(33, 'Sheffield United', 'https://i.imgur.com/e7q2e2t.png'),
+(34, 'Stoke', 'https://i.imgur.com/YSpBndd.png'),
+(35, 'Hull', 'https://i.imgur.com/8oGnnEg.png'),
+(36, 'Burnley', 'https://i.imgur.com/fSYJDGL.png'),
+(37, 'Blackpool', 'https://i.imgur.com/8AF15xN.png'),
+(38, 'QPR', 'https://i.imgur.com/5hUJZm8.png'),
+(39, 'Swansea', 'https://i.imgur.com/Rfo2U0q.png'),
+(40, 'Cardiff', 'https://i.imgur.com/xFuNIY9.png'),
+(41, 'Bournemouth', 'https://i.imgur.com/sXAA5o2.png'),
+(42, 'Brighton', 'https://i.imgur.com/Sw7SeCB.png'),
+(43, 'Huddersfield', 'https://i.imgur.com/xkZWnBz.png');
 
 -- --------------------------------------------------------
 
