@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 08, 2021 at 03:49 PM
+-- Generation Time: Mar 17, 2021 at 02:18 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -41,7 +41,7 @@ CREATE TABLE `epl_admins` (
 --
 
 INSERT INTO `epl_admins` (`AdminID`, `AdminName`, `AdminSurname`, `AdminEmail`, `Password`) VALUES
-(50000, 'Tom', 'Kilpatrick', 'tom7182@outlook.com', 'tom'),
+(50000, 'Tom', 'Kilpatrick', 'tom7182@outlook.com', 'maindev'),
 (50001, 'John', 'Busch', 'j.a.busch@qub.ac.uk', 'inspector');
 
 -- --------------------------------------------------------
@@ -54,18 +54,18 @@ CREATE TABLE `epl_api_users` (
   `id` int(11) NOT NULL,
   `UserFirstName` varchar(100) NOT NULL,
   `UserSecondName` varchar(100) NOT NULL,
-  `UserEmail` varchar(255) NOT NULL,
-  `UserKey` varchar(255) NOT NULL
+  `UserKey` varchar(255) NOT NULL,
+  `OrganisationName` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `epl_api_users`
 --
 
-INSERT INTO `epl_api_users` (`id`, `UserFirstName`, `UserSecondName`, `UserEmail`, `UserKey`) VALUES
-(15, 'main', 'admin', 'tkilpatrick01@qub.ac.uk', '492dd3-816c61-f89f93-e14f5f-e1566b'),
-(16, 'Thomas', 'Kilpatrick', 'tom7182@outlook.com', '71b9f8-7fac2a-b2ccc0-235004-c368f1'),
-(17, 'Thomas', 'Kilpatrick', 'masterchef7182@gmail.com', '43be74-85e829-66a49b-222526-0aba17');
+INSERT INTO `epl_api_users` (`id`, `UserFirstName`, `UserSecondName`, `UserKey`, `OrganisationName`) VALUES
+(15, 'main', 'admin', '492dd3-816c61-f89f93-e14f5f-e1566b', 'epl_main_site'),
+(16, 'Thomas', 'Kilpatrick', '71b9f8-7fac2a-b2ccc0-235004-c368f1', 'epl_main_site'),
+(27, 'Thomas', 'Kilpatrick', 'ab8af3-e7288a-83f817-15db49-382276', 'epl_main_site');
 
 -- --------------------------------------------------------
 
@@ -23660,7 +23660,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonID`, `MatchDate`, `KickOffTime`, `R
 (8811, 30, '2021-02-03', '19:30:00', 225),
 (8812, 30, '2021-02-03', '20:15:00', 236),
 (8813, 30, '2021-02-03', '20:15:00', 221),
-(8860, 30, '2021-03-30', '18:00:00', 189);
+(8860, 30, '2021-03-01', '11:00:00', 189);
 
 -- --------------------------------------------------------
 
@@ -23796,7 +23796,31 @@ INSERT INTO `epl_seasons` (`SeasonID`, `SeasonYears`) VALUES
 (27, '2017-2018'),
 (28, '2018-2019'),
 (29, '2019-2020'),
-(30, '2020-2021');
+(30, '2020-2021'),
+(52, '2021-2022');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `epl_site_users`
+--
+
+CREATE TABLE `epl_site_users` (
+  `id` int(11) NOT NULL,
+  `UserName` varchar(100) NOT NULL,
+  `UserSurname` varchar(100) NOT NULL,
+  `UserEmail` varchar(100) NOT NULL,
+  `UserPassword` varchar(255) NOT NULL,
+  `UserEmailConfirmed` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `epl_site_users`
+--
+
+INSERT INTO `epl_site_users` (`id`, `UserName`, `UserSurname`, `UserEmail`, `UserPassword`, `UserEmailConfirmed`) VALUES
+(6, 'Thomas', 'Kilpatrick', 'tom7182@outlook.com', '$2y$10$lCn3JGTve1E6JrK/cgWtkehx4SohJhbiIxugHAL1PkHsvAzO92ku2', 1),
+(12, 'Thomas', 'Kilpatrick', 'masterchef7182@gmail.com', '$2y$10$sUFhhEKVNXlIwGyecWPu8e.Oxlf5AFa/69IqqlTYcfi3GknotJCGu', 1);
 
 --
 -- Indexes for dumped tables
@@ -23865,6 +23889,12 @@ ALTER TABLE `epl_seasons`
   ADD PRIMARY KEY (`SeasonID`);
 
 --
+-- Indexes for table `epl_site_users`
+--
+ALTER TABLE `epl_site_users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -23872,55 +23902,61 @@ ALTER TABLE `epl_seasons`
 -- AUTO_INCREMENT for table `epl_admins`
 --
 ALTER TABLE `epl_admins`
-  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50012;
+  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50014;
 
 --
 -- AUTO_INCREMENT for table `epl_api_users`
 --
 ALTER TABLE `epl_api_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `epl_away_team_stats`
 --
 ALTER TABLE `epl_away_team_stats`
-  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8835;
+  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8836;
 
 --
 -- AUTO_INCREMENT for table `epl_clubs`
 --
 ALTER TABLE `epl_clubs`
-  MODIFY `ClubID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `ClubID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `epl_home_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
-  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8868;
+  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8869;
 
 --
 -- AUTO_INCREMENT for table `epl_matches`
 --
 ALTER TABLE `epl_matches`
-  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8861;
+  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8862;
 
 --
 -- AUTO_INCREMENT for table `epl_match_edits`
 --
 ALTER TABLE `epl_match_edits`
-  MODIFY `EditID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `EditID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `epl_referees`
 --
 ALTER TABLE `epl_referees`
-  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=272;
+  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=277;
 
 --
 -- AUTO_INCREMENT for table `epl_seasons`
 --
 ALTER TABLE `epl_seasons`
-  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
+--
+-- AUTO_INCREMENT for table `epl_site_users`
+--
+ALTER TABLE `epl_site_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
