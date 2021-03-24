@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 20, 2021 at 09:02 AM
+-- Generation Time: Mar 20, 2021 at 12:56 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -7916,7 +7916,8 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubID`, `MatchID`, `A
 (8812, 4, 8812, 3, 0, 20, 10, 3, 15, 1, 0),
 (8813, 42, 8813, 1, 0, 13, 4, 3, 6, 0, 0),
 (8838, 19, 8864, 4, 2, 10, 6, 1, 5, 1, 0),
-(8839, 42, 8865, 4, 2, 5, 4, 10, 1, 0, 0);
+(8839, 42, 8865, 4, 2, 5, 4, 10, 1, 0, 0),
+(8842, 3, 8868, 3, 2, 4, 3, 4, 10, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -15825,7 +15826,8 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubID`, `MatchID`, `H
 (8812, 12, 8812, 1, 0, 9, 2, 7, 11, 1, 0),
 (8813, 13, 8813, 0, 0, 11, 1, 6, 12, 1, 0),
 (8873, 16, 8864, 2, 1, 3, 2, 1, 10, 1, 0),
-(8874, 16, 8865, 4, 2, 5, 4, 10, 1, 1, 0);
+(8874, 16, 8865, 4, 2, 5, 4, 10, 1, 1, 0),
+(8877, 16, 8868, 3, 2, 4, 3, 4, 10, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -23669,7 +23671,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonID`, `MatchDate`, `KickOffTime`, `R
 (8813, 30, '2021-02-03', '20:15:00', 221, '0'),
 (8864, 30, '2021-03-03', '18:00:00', 189, '492dd3-816c61-f89f93-e14f5f-e1566b'),
 (8865, 30, '2021-03-15', '13:28:00', 189, '50016'),
-(8867, 30, '2021-03-17', '17:24:00', 114, '492dd3-816c61-f89f93-e14f5f-e1566b');
+(8868, 30, '2021-03-17', '11:37:00', 189, '12');
 
 -- --------------------------------------------------------
 
@@ -23684,14 +23686,6 @@ CREATE TABLE `epl_match_edits` (
   `EditDescription` varchar(255) NOT NULL,
   `EditedDate` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `epl_match_edits`
---
-
-INSERT INTO `epl_match_edits` (`EditID`, `MatchID`, `EditedByUserID`, `EditDescription`, `EditedDate`) VALUES
-(35, 8867, '492dd3-816c61-f89f93-e14f5f-e1566b', 'testing API for edits', '2021-03-19 17:06:41'),
-(36, 8867, '492dd3-816c61-f89f93-e14f5f-e1566b', 'testing API for edits', '2021-03-19 17:12:48');
 
 -- --------------------------------------------------------
 
@@ -23775,7 +23769,8 @@ INSERT INTO `epl_referees` (`RefereeID`, `RefereeName`) VALUES
 (240, 'R. Jones'),
 (241, 'S. Scott'),
 (242, 'D. England'),
-(243, 'J. Moss');
+(243, 'J. Moss'),
+(288, 'T. Kilpatrick');
 
 -- --------------------------------------------------------
 
@@ -23925,13 +23920,13 @@ ALTER TABLE `epl_admins`
 -- AUTO_INCREMENT for table `epl_api_users`
 --
 ALTER TABLE `epl_api_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `epl_away_team_stats`
 --
 ALTER TABLE `epl_away_team_stats`
-  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8842;
+  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8843;
 
 --
 -- AUTO_INCREMENT for table `epl_clubs`
@@ -23943,13 +23938,13 @@ ALTER TABLE `epl_clubs`
 -- AUTO_INCREMENT for table `epl_home_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
-  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8877;
+  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8878;
 
 --
 -- AUTO_INCREMENT for table `epl_matches`
 --
 ALTER TABLE `epl_matches`
-  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8868;
+  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8869;
 
 --
 -- AUTO_INCREMENT for table `epl_match_edits`
@@ -23961,13 +23956,13 @@ ALTER TABLE `epl_match_edits`
 -- AUTO_INCREMENT for table `epl_referees`
 --
 ALTER TABLE `epl_referees`
-  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=288;
+  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=289;
 
 --
 -- AUTO_INCREMENT for table `epl_seasons`
 --
 ALTER TABLE `epl_seasons`
-  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `epl_site_users`
