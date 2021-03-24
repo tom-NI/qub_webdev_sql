@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 11, 2021 at 09:53 AM
+-- Generation Time: Feb 17, 2021 at 09:22 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -23733,27 +23733,27 @@ CREATE TABLE `epl_seasons` (
 --
 
 INSERT INTO `epl_seasons` (`SeasonID`, `SeasonYears`) VALUES
-(1001, '2000-01'),
-(1002, '2001-02'),
-(1003, '2002-03'),
-(1004, '2003-04'),
-(1005, '2004-05'),
-(1006, '2005-06'),
-(1007, '2006-07'),
-(1008, '2007-08'),
-(1009, '2008-09'),
-(1010, '2009-10'),
-(1011, '2010-11'),
-(1012, '2011-12'),
-(1013, '2012-13'),
-(1014, '2013-14'),
-(1015, '2014-15'),
-(1016, '2015-16'),
-(1017, '2016-17'),
-(1018, '2017-18'),
-(1019, '2018-19'),
-(1020, '2019-20'),
-(1021, '2020-21');
+(1001, '2000-2001'),
+(1002, '2001-2002'),
+(1003, '2002-2003'),
+(1004, '2003-2004'),
+(1005, '2004-2005'),
+(1006, '2005-2006'),
+(1007, '2006-2007'),
+(1008, '2007-2008'),
+(1009, '2008-2009'),
+(1010, '2009-2010'),
+(1011, '2010-2011'),
+(1012, '2011-2012'),
+(1013, '2012-2013'),
+(1014, '2013-2014'),
+(1015, '2014-2015'),
+(1016, '2015-2016'),
+(1017, '2016-2017'),
+(1018, '2017-2018'),
+(1019, '2018-2019'),
+(1020, '2019-2020'),
+(1021, '2020-2021');
 
 --
 -- Indexes for dumped tables
@@ -23833,13 +23833,13 @@ ALTER TABLE `epl_matches`
 -- AUTO_INCREMENT for table `epl_referees`
 --
 ALTER TABLE `epl_referees`
-  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1153;
+  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1155;
 
 --
 -- AUTO_INCREMENT for table `epl_seasons`
 --
 ALTER TABLE `epl_seasons`
-  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1022;
+  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1033;
 
 --
 -- Constraints for dumped tables
