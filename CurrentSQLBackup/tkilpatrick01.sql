@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 23, 2021 at 08:49 PM
+-- Generation Time: Feb 25, 2021 at 03:35 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -23953,7 +23953,7 @@ ALTER TABLE `epl_api_access`
 -- AUTO_INCREMENT for table `epl_away_team_stats`
 --
 ALTER TABLE `epl_away_team_stats`
-  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8814;
+  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8818;
 
 --
 -- AUTO_INCREMENT for table `epl_clubs`
@@ -23965,13 +23965,13 @@ ALTER TABLE `epl_clubs`
 -- AUTO_INCREMENT for table `epl_home_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
-  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8814;
+  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8818;
 
 --
 -- AUTO_INCREMENT for table `epl_matches`
 --
 ALTER TABLE `epl_matches`
-  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8814;
+  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8818;
 
 --
 -- AUTO_INCREMENT for table `epl_match_edits`
