@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 05, 2021 at 12:37 PM
+-- Generation Time: Mar 08, 2021 at 03:49 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -47,21 +47,25 @@ INSERT INTO `epl_admins` (`AdminID`, `AdminName`, `AdminSurname`, `AdminEmail`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `epl_api_access`
+-- Table structure for table `epl_api_users`
 --
 
-CREATE TABLE `epl_api_access` (
+CREATE TABLE `epl_api_users` (
   `id` int(11) NOT NULL,
+  `UserFirstName` varchar(100) NOT NULL,
+  `UserSecondName` varchar(100) NOT NULL,
   `UserEmail` varchar(255) NOT NULL,
   `UserKey` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `epl_api_access`
+-- Dumping data for table `epl_api_users`
 --
 
-INSERT INTO `epl_api_access` (`id`, `UserEmail`, `UserKey`) VALUES
-(1, 'dunno', 'dahgeglxcm');
+INSERT INTO `epl_api_users` (`id`, `UserFirstName`, `UserSecondName`, `UserEmail`, `UserKey`) VALUES
+(15, 'main', 'admin', 'tkilpatrick01@qub.ac.uk', '492dd3-816c61-f89f93-e14f5f-e1566b'),
+(16, 'Thomas', 'Kilpatrick', 'tom7182@outlook.com', '71b9f8-7fac2a-b2ccc0-235004-c368f1'),
+(17, 'Thomas', 'Kilpatrick', 'masterchef7182@gmail.com', '43be74-85e829-66a49b-222526-0aba17');
 
 -- --------------------------------------------------------
 
@@ -7907,7 +7911,8 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubID`, `MatchID`, `A
 (8810, 11, 8810, 2, 2, 9, 5, 2, 10, 1, 0),
 (8811, 10, 8811, 2, 2, 10, 6, 1, 12, 3, 0),
 (8812, 4, 8812, 3, 0, 20, 10, 3, 15, 1, 0),
-(8813, 42, 8813, 1, 0, 13, 4, 3, 6, 0, 0);
+(8813, 42, 8813, 1, 0, 13, 4, 3, 6, 0, 0),
+(8834, 19, 8860, 4, 2, 10, 6, 1, 5, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -7995,7 +8000,7 @@ CREATE TABLE `epl_home_team_stats` (
 --
 
 INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
-(1000, 1, 1000, 4, 2, 17, 14, 6, 13, 1, 0),
+(1000, 1, 1000, 5, 2, 17, 14, 6, 13, 1, 0),
 (1001, 3, 1001, 4, 1, 17, 10, 7, 19, 1, 0),
 (1002, 5, 1002, 1, 1, 6, 3, 8, 15, 5, 1),
 (1003, 7, 1003, 2, 1, 6, 4, 5, 11, 1, 0),
@@ -15814,7 +15819,8 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubID`, `MatchID`, `H
 (8810, 23, 8810, 0, 0, 8, 1, 5, 17, 3, 0),
 (8811, 9, 8811, 1, 0, 16, 7, 7, 12, 2, 0),
 (8812, 12, 8812, 1, 0, 9, 2, 7, 11, 1, 0),
-(8813, 13, 8813, 0, 0, 11, 1, 6, 12, 1, 0);
+(8813, 13, 8813, 0, 0, 11, 1, 6, 12, 1, 0),
+(8867, 16, 8860, 2, 1, 3, 2, 1, 10, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -23653,7 +23659,8 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonID`, `MatchDate`, `KickOffTime`, `R
 (8810, 30, '2021-02-03', '18:00:00', 240),
 (8811, 30, '2021-02-03', '19:30:00', 225),
 (8812, 30, '2021-02-03', '20:15:00', 236),
-(8813, 30, '2021-02-03', '20:15:00', 221);
+(8813, 30, '2021-02-03', '20:15:00', 221),
+(8860, 30, '2021-03-30', '18:00:00', 189);
 
 -- --------------------------------------------------------
 
@@ -23802,9 +23809,9 @@ ALTER TABLE `epl_admins`
   ADD PRIMARY KEY (`AdminID`);
 
 --
--- Indexes for table `epl_api_access`
+-- Indexes for table `epl_api_users`
 --
-ALTER TABLE `epl_api_access`
+ALTER TABLE `epl_api_users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -23868,52 +23875,52 @@ ALTER TABLE `epl_admins`
   MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50012;
 
 --
--- AUTO_INCREMENT for table `epl_api_access`
+-- AUTO_INCREMENT for table `epl_api_users`
 --
-ALTER TABLE `epl_api_access`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `epl_api_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `epl_away_team_stats`
 --
 ALTER TABLE `epl_away_team_stats`
-  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8832;
+  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8835;
 
 --
 -- AUTO_INCREMENT for table `epl_clubs`
 --
 ALTER TABLE `epl_clubs`
-  MODIFY `ClubID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `ClubID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `epl_home_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
-  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8865;
+  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8868;
 
 --
 -- AUTO_INCREMENT for table `epl_matches`
 --
 ALTER TABLE `epl_matches`
-  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8858;
+  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8861;
 
 --
 -- AUTO_INCREMENT for table `epl_match_edits`
 --
 ALTER TABLE `epl_match_edits`
-  MODIFY `EditID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `EditID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `epl_referees`
 --
 ALTER TABLE `epl_referees`
-  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=270;
+  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=272;
 
 --
 -- AUTO_INCREMENT for table `epl_seasons`
 --
 ALTER TABLE `epl_seasons`
-  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- Constraints for dumped tables
