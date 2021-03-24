@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 20, 2021 at 06:12 PM
+-- Generation Time: Mar 24, 2021 at 08:21 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -36,6 +36,14 @@ CREATE TABLE `epl_admins` (
   `Password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `epl_admins`
+--
+
+INSERT INTO `epl_admins` (`AdminID`, `AdminName`, `AdminSurname`, `AdminEmail`, `Password`) VALUES
+(50000, 'Tom', 'Kilpatrick', 'tom7182@outlook.com', '$2y$10$aX372ZvDLlJNLyjcv9iMnOrc6BdI5ykG97t151PHJ729KX01dZ6Vq'),
+(50001, 'John', 'Busch', 'j.a.busch@qub.ac.uk', '$2y$10$3HPE2zJe/tVsXuXBgsg8veyteSxEgsWRWwVX9sJr0i2tkfaHy38cu');
+
 -- --------------------------------------------------------
 
 --
@@ -57,7 +65,7 @@ CREATE TABLE `epl_api_users` (
 
 INSERT INTO `epl_api_users` (`id`, `UserFirstName`, `UserSecondName`, `UserEmail`, `UserKey`, `OrganisationName`) VALUES
 (1000, 'Thomas', 'Kilpatrick', 'tom7182@outlook.com', '492dd3-816c61-f89f93-e14f5f-e1566b', 'epl_main_site'),
-(1001, 'Tom', 'K', 'masterchef7182@gmail.com', '510fd8-b577b1-2c6d27-10519e-a7ba5c', 'personal_use');
+(1002, 'Thomas', 'Kilpatrick', 'masterchef7182@gmail.com', '7939a1-de6d87-3d404c-b77fb5-4826ed', 'personal');
 
 -- --------------------------------------------------------
 
@@ -7977,7 +7985,7 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubName`, `MatchID`, 
 (7884, 'Tottenham', 7884, 1, 1, 6, 3, 3, 14, 2, 1),
 (7885, 'West Ham', 7885, 0, 0, 7, 0, 3, 2, 0, 0),
 (7886, 'Liverpool', 7886, 1, 1, 12, 4, 2, 10, 1, 0),
-(7888, 'Manchester United', 7888, 4, 2, 10, 6, 1, 5, 1, 0);
+(7916, 'Chelsea', 7906, 4, 2, 5, 4, 10, 3, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -15959,7 +15967,7 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubName`, `MatchID`, 
 (7884, 'Arsenal', 7884, 2, 1, 13, 3, 6, 12, 1, 0),
 (7885, 'Manchester United', 7885, 1, 0, 15, 4, 6, 12, 4, 0),
 (7886, 'Wolves', 7886, 0, 0, 10, 5, 3, 17, 2, 0),
-(7894, 'Arsenal', 7888, 2, 1, 3, 2, 1, 10, 1, 0);
+(7936, 'Arsenal', 7906, 4, 2, 5, 4, 10, 3, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -15984,7 +15992,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (1, '2000-2001', '2000-08-19', NULL, 'R. Harris', 'Admin - flat file import'),
 (2, '2000-2001', '2000-08-19', NULL, 'G. Barber', 'Admin - flat file import'),
 (3, '2000-2001', '2000-08-19', NULL, 'B. Knight', 'Admin - flat file import'),
-(4, '2000-2001', '2000-08-19', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(4, '2000-2001', '2000-08-19', NULL, 'A. DUrso', 'Admin - flat file import'),
 (5, '2000-2001', '2000-08-19', NULL, 'D. Gallagher', 'Admin - flat file import'),
 (6, '2000-2001', '2000-08-19', NULL, 'M. Riley', 'Admin - flat file import'),
 (7, '2000-2001', '2000-08-19', NULL, 'P. Durkin', 'Admin - flat file import'),
@@ -16004,7 +16012,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (21, '2000-2001', '2000-08-26', NULL, 'S. Bennett', 'Admin - flat file import'),
 (22, '2000-2001', '2000-08-26', NULL, 'M. Riley', 'Admin - flat file import'),
 (23, '2000-2001', '2000-08-26', NULL, 'G. Poll', 'Admin - flat file import'),
-(24, '2000-2001', '2000-08-26', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(24, '2000-2001', '2000-08-26', NULL, 'A. DUrso', 'Admin - flat file import'),
 (25, '2000-2001', '2000-08-26', NULL, 'G. Barber', 'Admin - flat file import'),
 (26, '2000-2001', '2000-08-26', NULL, 'D. Elleray', 'Admin - flat file import'),
 (27, '2000-2001', '2000-08-26', NULL, 'J. Winter', 'Admin - flat file import'),
@@ -16022,7 +16030,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (39, '2000-2001', '2000-09-06', NULL, 'N. Barry', 'Admin - flat file import'),
 (40, '2000-2001', '2000-09-09', NULL, 'A. Wiley', 'Admin - flat file import'),
 (41, '2000-2001', '2000-09-09', NULL, 'P. Durkin', 'Admin - flat file import'),
-(42, '2000-2001', '2000-09-09', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(42, '2000-2001', '2000-09-09', NULL, 'A. DUrso', 'Admin - flat file import'),
 (43, '2000-2001', '2000-09-09', NULL, 'M. Dean', 'Admin - flat file import'),
 (44, '2000-2001', '2000-09-09', NULL, 'G. Barber', 'Admin - flat file import'),
 (45, '2000-2001', '2000-09-09', NULL, 'N. Barry', 'Admin - flat file import'),
@@ -16047,7 +16055,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (64, '2000-2001', '2000-09-23', NULL, 'M. Riley', 'Admin - flat file import'),
 (65, '2000-2001', '2000-09-23', NULL, 'P. Jones', 'Admin - flat file import'),
 (66, '2000-2001', '2000-09-23', NULL, 'M. Halsey', 'Admin - flat file import'),
-(67, '2000-2001', '2000-09-23', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(67, '2000-2001', '2000-09-23', NULL, 'A. DUrso', 'Admin - flat file import'),
 (68, '2000-2001', '2000-09-23', NULL, 'S. Bennett', 'Admin - flat file import'),
 (69, '2000-2001', '2000-09-24', NULL, 'A. Wiley', 'Admin - flat file import'),
 (70, '2000-2001', '2000-09-30', NULL, 'D. Elleray', 'Admin - flat file import'),
@@ -16073,7 +16081,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (90, '2000-2001', '2000-10-21', NULL, 'P. Taylor', 'Admin - flat file import'),
 (91, '2000-2001', '2000-10-21', NULL, 'M. Riley', 'Admin - flat file import'),
 (92, '2000-2001', '2000-10-21', NULL, 'S. Lodge', 'Admin - flat file import'),
-(93, '2000-2001', '2000-10-21', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(93, '2000-2001', '2000-10-21', NULL, 'A. DUrso', 'Admin - flat file import'),
 (94, '2000-2001', '2000-10-21', NULL, 'J. Winter', 'Admin - flat file import'),
 (95, '2000-2001', '2000-10-21', NULL, 'M. Halsey', 'Admin - flat file import'),
 (96, '2000-2001', '2000-10-21', NULL, 'M. Dean', 'Admin - flat file import'),
@@ -16085,7 +16093,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (102, '2000-2001', '2000-10-28', NULL, 'S. Dunn', 'Admin - flat file import'),
 (103, '2000-2001', '2000-10-28', NULL, 'N. Barry', 'Admin - flat file import'),
 (104, '2000-2001', '2000-10-28', NULL, 'G. Poll', 'Admin - flat file import'),
-(105, '2000-2001', '2000-10-28', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(105, '2000-2001', '2000-10-28', NULL, 'A. DUrso', 'Admin - flat file import'),
 (106, '2000-2001', '2000-10-28', NULL, 'A. Wiley', 'Admin - flat file import'),
 (107, '2000-2001', '2000-10-28', NULL, 'M. Riley', 'Admin - flat file import'),
 (108, '2000-2001', '2000-10-29', NULL, 'S. Lodge', 'Admin - flat file import'),
@@ -16094,7 +16102,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (111, '2000-2001', '2000-11-04', NULL, 'G. Poll', 'Admin - flat file import'),
 (112, '2000-2001', '2000-11-04', NULL, 'D. Elleray', 'Admin - flat file import'),
 (113, '2000-2001', '2000-11-04', NULL, 'M. Halsey', 'Admin - flat file import'),
-(114, '2000-2001', '2000-11-04', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(114, '2000-2001', '2000-11-04', NULL, 'A. DUrso', 'Admin - flat file import'),
 (115, '2000-2001', '2000-11-04', NULL, 'A. Wiley', 'Admin - flat file import'),
 (116, '2000-2001', '2000-11-04', NULL, 'J. Winter', 'Admin - flat file import'),
 (117, '2000-2001', '2000-11-04', NULL, 'D. Gallagher', 'Admin - flat file import'),
@@ -16111,7 +16119,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (128, '2000-2001', '2000-11-12', NULL, 'G. Poll', 'Admin - flat file import'),
 (129, '2000-2001', '2000-11-12', NULL, 'M. Riley', 'Admin - flat file import'),
 (130, '2000-2001', '2000-11-18', NULL, 'P. Durkin', 'Admin - flat file import'),
-(131, '2000-2001', '2000-11-18', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(131, '2000-2001', '2000-11-18', NULL, 'A. DUrso', 'Admin - flat file import'),
 (132, '2000-2001', '2000-11-18', NULL, 'M. Riley', 'Admin - flat file import'),
 (133, '2000-2001', '2000-11-18', NULL, 'P. Taylor', 'Admin - flat file import'),
 (134, '2000-2001', '2000-11-18', NULL, 'S. Dunn', 'Admin - flat file import'),
@@ -16150,7 +16158,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (167, '2000-2001', '2000-12-09', NULL, 'M. Riley', 'Admin - flat file import'),
 (168, '2000-2001', '2000-12-10', NULL, 'S. Dunn', 'Admin - flat file import'),
 (169, '2000-2001', '2000-12-10', NULL, 'A. Wiley', 'Admin - flat file import'),
-(170, '2000-2001', '2000-12-16', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(170, '2000-2001', '2000-12-16', NULL, 'A. DUrso', 'Admin - flat file import'),
 (171, '2000-2001', '2000-12-16', NULL, 'M. Messias', 'Admin - flat file import'),
 (172, '2000-2001', '2000-12-16', NULL, 'C. Wilkes', 'Admin - flat file import'),
 (173, '2000-2001', '2000-12-16', NULL, 'B. Knight', 'Admin - flat file import'),
@@ -16177,7 +16185,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (194, '2000-2001', '2000-12-26', NULL, 'J. Winter', 'Admin - flat file import'),
 (195, '2000-2001', '2000-12-26', NULL, 'M. Riley', 'Admin - flat file import'),
 (196, '2000-2001', '2000-12-26', NULL, 'S. Lodge', 'Admin - flat file import'),
-(197, '2000-2001', '2000-12-26', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(197, '2000-2001', '2000-12-26', NULL, 'A. DUrso', 'Admin - flat file import'),
 (198, '2000-2001', '2000-12-26', NULL, 'S. Dunn', 'Admin - flat file import'),
 (199, '2000-2001', '2000-12-27', NULL, 'D. Elleray', 'Admin - flat file import'),
 (200, '2000-2001', '2000-12-30', NULL, 'G. Barber', 'Admin - flat file import'),
@@ -16185,7 +16193,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (202, '2000-2001', '2000-12-30', NULL, 'C. Wilkes', 'Admin - flat file import'),
 (203, '2000-2001', '2000-12-30', NULL, 'D. Gallagher', 'Admin - flat file import'),
 (204, '2000-2001', '2000-12-30', NULL, 'M. Riley', 'Admin - flat file import'),
-(205, '2000-2001', '2000-12-30', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(205, '2000-2001', '2000-12-30', NULL, 'A. DUrso', 'Admin - flat file import'),
 (206, '2000-2001', '2001-01-01', NULL, 'G. Poll', 'Admin - flat file import'),
 (207, '2000-2001', '2001-01-01', NULL, 'P. Durkin', 'Admin - flat file import'),
 (208, '2000-2001', '2001-01-01', NULL, 'B. Knight', 'Admin - flat file import'),
@@ -16199,14 +16207,14 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (216, '2000-2001', '2001-01-13', NULL, 'D. Elleray', 'Admin - flat file import'),
 (217, '2000-2001', '2001-01-13', NULL, 'G. Barber', 'Admin - flat file import'),
 (218, '2000-2001', '2001-01-13', NULL, 'A. Wiley', 'Admin - flat file import'),
-(219, '2000-2001', '2001-01-13', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(219, '2000-2001', '2001-01-13', NULL, 'A. DUrso', 'Admin - flat file import'),
 (220, '2000-2001', '2001-01-13', NULL, 'M. Dean', 'Admin - flat file import'),
 (221, '2000-2001', '2001-01-13', NULL, 'R. Styles', 'Admin - flat file import'),
 (222, '2000-2001', '2001-01-13', NULL, 'J. Winter', 'Admin - flat file import'),
 (223, '2000-2001', '2001-01-13', NULL, 'S. Lodge', 'Admin - flat file import'),
 (224, '2000-2001', '2001-01-13', NULL, 'M. Messias', 'Admin - flat file import'),
 (225, '2000-2001', '2001-01-14', NULL, 'M. Riley', 'Admin - flat file import'),
-(226, '2000-2001', '2001-01-20', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(226, '2000-2001', '2001-01-20', NULL, 'A. DUrso', 'Admin - flat file import'),
 (227, '2000-2001', '2001-01-20', NULL, 'P. Durkin', 'Admin - flat file import'),
 (228, '2000-2001', '2001-01-20', NULL, 'J. Winter', 'Admin - flat file import'),
 (229, '2000-2001', '2001-01-20', NULL, 'A. Wiley', 'Admin - flat file import'),
@@ -16250,7 +16258,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (267, '2000-2001', '2001-02-24', NULL, 'M. Halsey', 'Admin - flat file import'),
 (268, '2000-2001', '2001-02-24', NULL, 'A. Wiley', 'Admin - flat file import'),
 (269, '2000-2001', '2001-02-24', NULL, 'G. Poll', 'Admin - flat file import'),
-(270, '2000-2001', '2001-02-24', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(270, '2000-2001', '2001-02-24', NULL, 'A. DUrso', 'Admin - flat file import'),
 (271, '2000-2001', '2001-02-24', NULL, 'N. Barry', 'Admin - flat file import'),
 (272, '2000-2001', '2001-02-24', NULL, 'R. Harris', 'Admin - flat file import'),
 (273, '2000-2001', '2001-02-24', NULL, 'J. Winter', 'Admin - flat file import'),
@@ -16263,7 +16271,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (280, '2000-2001', '2001-03-03', NULL, 'D. Gallagher', 'Admin - flat file import'),
 (281, '2000-2001', '2001-03-03', NULL, 'J. Winter', 'Admin - flat file import'),
 (282, '2000-2001', '2001-03-03', NULL, 'M. Dean', 'Admin - flat file import'),
-(283, '2000-2001', '2001-03-04', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(283, '2000-2001', '2001-03-04', NULL, 'A. DUrso', 'Admin - flat file import'),
 (284, '2000-2001', '2001-03-05', NULL, 'S. Lodge', 'Admin - flat file import'),
 (285, '2000-2001', '2001-03-07', NULL, 'A. Wiley', 'Admin - flat file import'),
 (286, '2000-2001', '2001-03-10', NULL, 'R. Styles', 'Admin - flat file import'),
@@ -16284,7 +16292,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (301, '2000-2001', '2001-03-31', NULL, 'G. Poll', 'Admin - flat file import'),
 (302, '2000-2001', '2001-03-31', NULL, 'R. Styles', 'Admin - flat file import'),
 (303, '2000-2001', '2001-03-31', NULL, 'S. Dunn', 'Admin - flat file import'),
-(304, '2000-2001', '2001-03-31', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(304, '2000-2001', '2001-03-31', NULL, 'A. DUrso', 'Admin - flat file import'),
 (305, '2000-2001', '2001-04-01', NULL, 'J. Winter', 'Admin - flat file import'),
 (306, '2000-2001', '2001-04-02', NULL, 'A. Wiley', 'Admin - flat file import'),
 (307, '2000-2001', '2001-04-04', NULL, 'M. Dean', 'Admin - flat file import'),
@@ -16293,7 +16301,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (310, '2000-2001', '2001-04-07', NULL, 'J. Winter', 'Admin - flat file import'),
 (311, '2000-2001', '2001-04-07', NULL, 'G. Barber', 'Admin - flat file import'),
 (312, '2000-2001', '2001-04-08', NULL, 'D. Elleray', 'Admin - flat file import'),
-(313, '2000-2001', '2001-04-09', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(313, '2000-2001', '2001-04-09', NULL, 'A. DUrso', 'Admin - flat file import'),
 (314, '2000-2001', '2001-04-10', NULL, 'S. Dunn', 'Admin - flat file import'),
 (315, '2000-2001', '2001-04-10', NULL, 'M. Halsey', 'Admin - flat file import'),
 (316, '2000-2001', '2001-04-10', NULL, 'S. Bennett', 'Admin - flat file import'),
@@ -16348,7 +16356,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (365, '2000-2001', '2001-05-05', NULL, 'C. Wilkes', 'Admin - flat file import'),
 (366, '2000-2001', '2001-05-07', NULL, 'S. Lodge', 'Admin - flat file import'),
 (367, '2000-2001', '2001-05-08', NULL, 'D. Gallagher', 'Admin - flat file import'),
-(368, '2000-2001', '2001-05-13', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(368, '2000-2001', '2001-05-13', NULL, 'A. DUrso', 'Admin - flat file import'),
 (369, '2000-2001', '2001-05-13', NULL, 'J. Winter', 'Admin - flat file import'),
 (370, '2000-2001', '2001-05-15', NULL, 'A. Wiley', 'Admin - flat file import'),
 (371, '2000-2001', '2001-05-19', NULL, 'G. Barber', 'Admin - flat file import'),
@@ -16360,7 +16368,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (377, '2000-2001', '2001-05-19', NULL, 'P. Durkin', 'Admin - flat file import'),
 (378, '2000-2001', '2001-05-19', NULL, 'B. Knight', 'Admin - flat file import'),
 (379, '2000-2001', '2001-05-19', NULL, 'P. Taylor', 'Admin - flat file import'),
-(380, '2000-2001', '2001-05-19', NULL, 'Andy DUrso', 'Admin - flat file import'),
+(380, '2000-2001', '2001-05-19', NULL, 'A. DUrso', 'Admin - flat file import'),
 (381, '2001-2002', '2001-08-18', NULL, 'N. Barry', 'Admin - flat file import'),
 (382, '2001-2002', '2001-08-18', NULL, 'P. Durkin', 'Admin - flat file import'),
 (383, '2001-2002', '2001-08-18', NULL, 'C. Wilkes', 'Admin - flat file import'),
@@ -16614,9 +16622,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (631, '2001-2002', '2002-02-09', NULL, 'P. Durkin', 'Admin - flat file import'),
 (632, '2001-2002', '2002-02-09', NULL, 'D. Pugh', 'Admin - flat file import'),
 (633, '2001-2002', '2002-02-09', NULL, 'G. Poll', 'Admin - flat file import'),
-(634, '2001-2002', '2002-02-09', NULL, 'M. Halsey', 'Admin - flat file import');
+(634, '2001-2002', '2002-02-09', NULL, 'M. Halsey', 'Admin - flat file import'),
+(635, '2001-2002', '2002-02-09', NULL, 'S. Bennett', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(635, '2001-2002', '2002-02-09', NULL, 'S. Bennett', 'Admin - flat file import'),
 (636, '2001-2002', '2002-02-09', NULL, 'N. Barry', 'Admin - flat file import'),
 (637, '2001-2002', '2002-02-09', NULL, 'B. Knight', 'Admin - flat file import'),
 (638, '2001-2002', '2002-02-09', NULL, 'A. DUrso', 'Admin - flat file import'),
@@ -17245,9 +17253,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (1261, '2003-2004', '2003-11-22', NULL, 'P. Durkin', 'Admin - flat file import'),
 (1262, '2003-2004', '2003-11-22', NULL, 'M. Riley', 'Admin - flat file import'),
 (1263, '2003-2004', '2003-11-22', NULL, 'G. Poll', 'Admin - flat file import'),
-(1264, '2003-2004', '2003-11-22', NULL, 'G. Barber', 'Admin - flat file import');
+(1264, '2003-2004', '2003-11-22', NULL, 'G. Barber', 'Admin - flat file import'),
+(1265, '2003-2004', '2003-11-22', NULL, 'M. Halsey', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(1265, '2003-2004', '2003-11-22', NULL, 'M. Halsey', 'Admin - flat file import'),
 (1266, '2003-2004', '2003-11-22', NULL, 'P. Dowd', 'Admin - flat file import'),
 (1267, '2003-2004', '2003-11-22', NULL, 'N. Barry', 'Admin - flat file import'),
 (1268, '2003-2004', '2003-11-22', NULL, 'D. Gallagher', 'Admin - flat file import'),
@@ -17873,9 +17881,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (1888, '2004-2005', '2005-05-08', NULL, 'G. Poll', 'Admin - flat file import'),
 (1889, '2004-2005', '2005-05-10', NULL, 'G. Poll', 'Admin - flat file import'),
 (1890, '2004-2005', '2005-05-11', NULL, 'A. Wiley', 'Admin - flat file import'),
-(1891, '2004-2005', '2005-05-15', NULL, 'D. Gallagher', 'Admin - flat file import');
+(1891, '2004-2005', '2005-05-15', NULL, 'D. Gallagher', 'Admin - flat file import'),
+(1892, '2004-2005', '2005-05-15', NULL, 'N. Barry', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(1892, '2004-2005', '2005-05-15', NULL, 'N. Barry', 'Admin - flat file import'),
 (1893, '2004-2005', '2005-05-15', NULL, 'M Clattenburg', 'Admin - flat file import'),
 (1894, '2004-2005', '2005-05-15', NULL, 'S. Dunn', 'Admin - flat file import'),
 (1895, '2004-2005', '2005-05-15', NULL, 'B. Knight', 'Admin - flat file import'),
@@ -18500,9 +18508,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (2514, '2006-2007', '2007-01-20', NULL, 'U. Rennie', 'Admin - flat file import'),
 (2515, '2006-2007', '2007-01-20', NULL, 'M Clattenburg', 'Admin - flat file import'),
 (2516, '2006-2007', '2007-01-20', NULL, 'M. Halsey', 'Admin - flat file import'),
-(2517, '2006-2007', '2007-01-21', NULL, 'S. Bennett', 'Admin - flat file import');
+(2517, '2006-2007', '2007-01-21', NULL, 'S. Bennett', 'Admin - flat file import'),
+(2518, '2006-2007', '2007-01-21', NULL, 'H. Webb', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(2518, '2006-2007', '2007-01-21', NULL, 'H. Webb', 'Admin - flat file import'),
 (2519, '2006-2007', '2007-01-23', NULL, 'D. Gallagher', 'Admin - flat file import'),
 (2520, '2006-2007', '2007-01-30', NULL, 'D. Gallagher', 'Admin - flat file import'),
 (2521, '2006-2007', '2007-01-30', NULL, 'S. Bennett', 'Admin - flat file import'),
@@ -19126,9 +19134,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (3139, '2008-2009', '2008-10-29', NULL, 'C. Foy', 'Admin - flat file import'),
 (3140, '2008-2009', '2008-11-01', NULL, 'M. Atkinson', 'Admin - flat file import'),
 (3141, '2008-2009', '2008-11-01', NULL, 'L Mason', 'Admin - flat file import'),
-(3142, '2008-2009', '2008-11-01', NULL, 'M. Dean', 'Admin - flat file import');
+(3142, '2008-2009', '2008-11-01', NULL, 'M. Dean', 'Admin - flat file import'),
+(3143, '2008-2009', '2008-11-01', NULL, 'A. Marriner', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(3143, '2008-2009', '2008-11-01', NULL, 'A. Marriner', 'Admin - flat file import'),
 (3144, '2008-2009', '2008-11-01', NULL, 'P. Walton', 'Admin - flat file import'),
 (3145, '2008-2009', '2008-11-01', NULL, 'R. Styles', 'Admin - flat file import'),
 (3146, '2008-2009', '2008-11-01', NULL, 'P. Dowd', 'Admin - flat file import'),
@@ -19753,9 +19761,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (3765, '2009-2010', '2010-04-18', NULL, 'L Probert', 'Admin - flat file import'),
 (3766, '2009-2010', '2010-04-18', NULL, 'L Mason', 'Admin - flat file import'),
 (3767, '2009-2010', '2010-04-19', NULL, 'P. Walton', 'Admin - flat file import'),
-(3768, '2009-2010', '2010-04-21', NULL, 'M. Dean', 'Admin - flat file import');
+(3768, '2009-2010', '2010-04-21', NULL, 'M. Dean', 'Admin - flat file import'),
+(3769, '2009-2010', '2010-04-24', NULL, 'M. Dean', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(3769, '2009-2010', '2010-04-24', NULL, 'M. Dean', 'Admin - flat file import'),
 (3770, '2009-2010', '2010-04-24', NULL, 'H. Webb', 'Admin - flat file import'),
 (3771, '2009-2010', '2010-04-24', NULL, 'L Probert', 'Admin - flat file import'),
 (3772, '2009-2010', '2010-04-24', NULL, 'A. Marriner', 'Admin - flat file import'),
@@ -20379,9 +20387,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (4390, '2011-2012', '2012-01-16', NULL, 'M. Atkinson', 'Admin - flat file import'),
 (4391, '2011-2012', '2012-01-21', NULL, 'K. Friend', 'Admin - flat file import'),
 (4392, '2011-2012', '2012-01-21', NULL, 'M. Halsey', 'Admin - flat file import'),
-(4393, '2011-2012', '2012-01-21', NULL, 'L Mason', 'Admin - flat file import');
+(4393, '2011-2012', '2012-01-21', NULL, 'L Mason', 'Admin - flat file import'),
+(4394, '2011-2012', '2012-01-21', NULL, 'M Clattenburg', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(4394, '2011-2012', '2012-01-21', NULL, 'M Clattenburg', 'Admin - flat file import'),
 (4395, '2011-2012', '2012-01-21', NULL, 'J. Moss', 'Admin - flat file import'),
 (4396, '2011-2012', '2012-01-21', NULL, 'A. Taylor', 'Admin - flat file import'),
 (4397, '2011-2012', '2012-01-21', NULL, 'C. Foy', 'Admin - flat file import'),
@@ -21006,9 +21014,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (5016, '2013-2014', '2013-10-19', NULL, 'H. Webb', 'Admin - flat file import'),
 (5017, '2013-2014', '2013-10-19', NULL, 'C. Pawson', 'Admin - flat file import'),
 (5018, '2013-2014', '2013-10-19', NULL, 'M Oliver', 'Admin - flat file import'),
-(5019, '2013-2014', '2013-10-20', NULL, 'P. Dowd', 'Admin - flat file import');
+(5019, '2013-2014', '2013-10-20', NULL, 'P. Dowd', 'Admin - flat file import'),
+(5020, '2013-2014', '2013-10-21', NULL, 'L Mason', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(5020, '2013-2014', '2013-10-21', NULL, 'L Mason', 'Admin - flat file import'),
 (5021, '2013-2014', '2013-10-26', NULL, 'A. Taylor', 'Admin - flat file import'),
 (5022, '2013-2014', '2013-10-26', NULL, 'C. Foy', 'Admin - flat file import'),
 (5023, '2013-2014', '2013-10-26', NULL, 'J. Moss', 'Admin - flat file import'),
@@ -21632,9 +21640,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (5641, '2014-2015', '2015-04-18', NULL, 'M. Dean', 'Admin - flat file import'),
 (5642, '2014-2015', '2015-04-18', NULL, 'J. Moss', 'Admin - flat file import'),
 (5643, '2014-2015', '2015-04-18', NULL, 'M. Jones', 'Admin - flat file import'),
-(5644, '2014-2015', '2015-04-18', NULL, 'L Probert', 'Admin - flat file import');
+(5644, '2014-2015', '2015-04-18', NULL, 'L Probert', 'Admin - flat file import'),
+(5645, '2014-2015', '2015-04-18', NULL, 'M Clattenburg', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(5645, '2014-2015', '2015-04-18', NULL, 'M Clattenburg', 'Admin - flat file import'),
 (5646, '2014-2015', '2015-04-19', NULL, 'A. Taylor', 'Admin - flat file import'),
 (5647, '2014-2015', '2015-04-19', NULL, 'K. Friend', 'Admin - flat file import'),
 (5648, '2014-2015', '2015-04-25', NULL, 'A. Taylor', 'Admin - flat file import'),
@@ -22256,9 +22264,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (6264, '2016-2017', '2016-12-31', NULL, 'A. Taylor', 'Admin - flat file import'),
 (6265, '2016-2017', '2016-12-31', NULL, 'C. Pawson', 'Admin - flat file import'),
 (6266, '2016-2017', '2016-12-31', NULL, 'L Mason', 'Admin - flat file import'),
-(6267, '2016-2017', '2016-12-31', NULL, 'M. Jones', 'Admin - flat file import');
+(6267, '2016-2017', '2016-12-31', NULL, 'M. Jones', 'Admin - flat file import'),
+(6268, '2016-2017', '2016-12-31', NULL, 'K. Friend', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(6268, '2016-2017', '2016-12-31', NULL, 'K. Friend', 'Admin - flat file import'),
 (6269, '2016-2017', '2017-01-01', NULL, 'A. Marriner', 'Admin - flat file import'),
 (6270, '2016-2017', '2017-01-01', NULL, 'M Oliver', 'Admin - flat file import'),
 (6271, '2016-2017', '2017-01-02', NULL, 'K. Friend', 'Admin - flat file import'),
@@ -22880,9 +22888,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (6887, '2018-2019', '2018-09-15', NULL, 'M. Dean', 'Admin - flat file import'),
 (6888, '2018-2019', '2018-09-16', NULL, 'M. Atkinson', 'Admin - flat file import'),
 (6889, '2018-2019', '2018-09-16', NULL, 'A. Marriner', 'Admin - flat file import'),
-(6890, '2018-2019', '2018-09-17', NULL, 'A. Taylor', 'Admin - flat file import');
+(6890, '2018-2019', '2018-09-17', NULL, 'A. Taylor', 'Admin - flat file import'),
+(6891, '2018-2019', '2018-09-22', NULL, 'C. Kavanagh', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(6891, '2018-2019', '2018-09-22', NULL, 'C. Kavanagh', 'Admin - flat file import'),
 (6892, '2018-2019', '2018-09-22', NULL, 'A. Taylor', 'Admin - flat file import'),
 (6893, '2018-2019', '2018-09-22', NULL, 'M Oliver', 'Admin - flat file import'),
 (6894, '2018-2019', '2018-09-22', NULL, 'A. Marriner', 'Admin - flat file import'),
@@ -23484,9 +23492,9 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (7490, '2019-2020', '2020-02-24', '20:00:00', 'J. Moss', 'Admin - flat file import'),
 (7491, '2019-2020', '2020-02-28', '20:00:00', 'C. Pawson', 'Admin - flat file import'),
 (7492, '2019-2020', '2020-02-29', '12:30:00', 'M. Atkinson', 'Admin - flat file import'),
-(7493, '2019-2020', '2020-02-29', '15:00:00', 'A. Marriner', 'Admin - flat file import');
+(7493, '2019-2020', '2020-02-29', '15:00:00', 'A. Marriner', 'Admin - flat file import'),
+(7494, '2019-2020', '2020-02-29', '15:00:00', 'A Madley', 'Admin - flat file import');
 INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`, `RefereeName`, `AddedByUserID`) VALUES
-(7494, '2019-2020', '2020-02-29', '15:00:00', 'A Madley', 'Admin - flat file import'),
 (7495, '2019-2020', '2020-02-29', '15:00:00', 'A. Taylor', 'Admin - flat file import'),
 (7496, '2019-2020', '2020-02-29', '17:30:00', 'M Oliver', 'Admin - flat file import'),
 (7497, '2019-2020', '2020-03-01', '14:00:00', 'C. Kavanagh', 'Admin - flat file import'),
@@ -23879,7 +23887,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (7884, '2020-2021', '2021-03-14', '16:30:00', 'M Oliver', 'Admin - flat file import'),
 (7885, '2020-2021', '2021-03-14', '19:15:00', 'M. Atkinson', 'Admin - flat file import'),
 (7886, '2020-2021', '2021-03-15', '20:00:00', 'C. Pawson', 'Admin - flat file import'),
-(7888, '2020-2021', '2021-03-03', '18:00:00', 'R. Harris', '492dd3-816c61-f89f93-e14f5f-e1566b');
+(7906, '2020-2021', '2021-03-21', '18:00:00', 'R. Harris', '492dd3-816c61-f89f93-e14f5f-e1566b');
 
 -- --------------------------------------------------------
 
@@ -23894,6 +23902,16 @@ CREATE TABLE `epl_match_edits` (
   `EditDescription` varchar(255) NOT NULL,
   `EditedDate` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `epl_match_edits`
+--
+
+INSERT INTO `epl_match_edits` (`EditID`, `MatchID`, `EditedByUserID`, `EditDescription`, `EditedDate`) VALUES
+(21, 7902, '50000', 'Match Deleted', '2021-03-22 18:06:47'),
+(22, 7904, '50000', 'Match Deleted', '2021-03-22 18:07:07'),
+(23, 7903, '50000', 'Match Deleted', '2021-03-22 18:07:44'),
+(24, 7905, '50000', 'Match Deleted', '2021-03-22 18:28:45');
 
 -- --------------------------------------------------------
 
@@ -24121,19 +24139,19 @@ ALTER TABLE `epl_site_users`
 -- AUTO_INCREMENT for table `epl_admins`
 --
 ALTER TABLE `epl_admins`
-  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50000;
+  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50002;
 
 --
 -- AUTO_INCREMENT for table `epl_api_users`
 --
 ALTER TABLE `epl_api_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1002;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1003;
 
 --
 -- AUTO_INCREMENT for table `epl_away_team_stats`
 --
 ALTER TABLE `epl_away_team_stats`
-  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7889;
+  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7917;
 
 --
 -- AUTO_INCREMENT for table `epl_clubs`
@@ -24145,19 +24163,19 @@ ALTER TABLE `epl_clubs`
 -- AUTO_INCREMENT for table `epl_home_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
-  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7895;
+  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7937;
 
 --
 -- AUTO_INCREMENT for table `epl_matches`
 --
 ALTER TABLE `epl_matches`
-  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7889;
+  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7907;
 
 --
 -- AUTO_INCREMENT for table `epl_match_edits`
 --
 ALTER TABLE `epl_match_edits`
-  MODIFY `EditID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `EditID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `epl_referees`
@@ -24192,12 +24210,6 @@ ALTER TABLE `epl_away_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
   ADD CONSTRAINT `fk_newmatchname` FOREIGN KEY (`MatchID`) REFERENCES `epl_matches` (`MatchID`);
-
---
--- Constraints for table `epl_match_edits`
---
-ALTER TABLE `epl_match_edits`
-  ADD CONSTRAINT `fk_match_id` FOREIGN KEY (`MatchID`) REFERENCES `epl_matches` (`MatchID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
