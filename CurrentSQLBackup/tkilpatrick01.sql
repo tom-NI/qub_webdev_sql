@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 17, 2021 at 11:21 AM
+-- Generation Time: Feb 17, 2021 at 11:49 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `epl_away_team_stats` (
   `AwayTeamStatID` int(11) NOT NULL,
-  `ClubID` int(11) NOT NULL,
+  `AwayClubID` int(11) NOT NULL,
   `MatchID` int(11) NOT NULL,
   `ATTotalGoals` int(11) NOT NULL,
   `ATHalfTimeGoals` int(11) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE `epl_away_team_stats` (
 -- Dumping data for table `epl_away_team_stats`
 --
 
-INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
+INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
 (1000, 2, 1000, 0, 0, 8, 4, 6, 12, 2, 0),
 (1001, 4, 1000, 2, 0, 12, 5, 7, 14, 2, 0),
 (1002, 6, 1000, 3, 1, 16, 9, 4, 21, 3, 0),
@@ -1261,7 +1261,7 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTot
 (2211, 25, 2208, 0, 0, 5, 2, 1, 11, 1, 1),
 (2212, 8, 2208, 0, 0, 7, 4, 4, 10, 2, 0),
 (2213, 1, 2208, 2, 0, 11, 6, 9, 14, 2, 0);
-INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
+INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
 (2214, 10, 2208, 0, 0, 12, 4, 6, 14, 2, 0),
 (2215, 2, 2208, 0, 0, 9, 5, 10, 7, 2, 0),
 (2216, 22, 2216, 1, 0, 15, 5, 5, 16, 5, 0),
@@ -2471,7 +2471,7 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTot
 (3420, 3, 3419, 1, 1, 16, 10, 5, 13, 1, 0),
 (3421, 16, 3419, 1, 1, 7, 2, 6, 15, 5, 1),
 (3422, 27, 3419, 0, 0, 3, 1, 1, 13, 3, 0);
-INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
+INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
 (3423, 10, 3419, 0, 0, 7, 4, 2, 15, 1, 0),
 (3424, 17, 3424, 0, 0, 7, 4, 2, 15, 2, 0),
 (3425, 23, 3424, 0, 0, 4, 2, 3, 13, 2, 0),
@@ -3679,7 +3679,7 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTot
 (4627, 23, 4626, 0, 0, 14, 9, 6, 9, 3, 0),
 (4628, 16, 4626, 2, 1, 14, 9, 4, 5, 2, 0),
 (4629, 22, 4629, 2, 2, 7, 4, 3, 17, 2, 0);
-INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
+INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
 (4630, 17, 4629, 0, 0, 7, 5, 3, 17, 3, 0),
 (4631, 35, 4631, 0, 0, 8, 4, 8, 10, 1, 0),
 (4632, 36, 4632, 0, 0, 10, 5, 7, 11, 2, 0),
@@ -4884,7 +4884,7 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTot
 (5831, 32, 5830, 1, 0, 12, 6, 10, 8, 1, 0),
 (5832, 28, 5830, 0, 0, 1, 1, 3, 15, 4, 0),
 (5833, 38, 5830, 2, 1, 5, 3, 3, 15, 3, 0);
-INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
+INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
 (5834, 4, 5830, 1, 1, 10, 7, 2, 12, 2, 0),
 (5835, 23, 5830, 2, 2, 7, 4, 3, 14, 3, 0),
 (5836, 20, 5830, 0, 0, 14, 7, 7, 17, 2, 0),
@@ -6094,7 +6094,7 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTot
 (7040, 3, 7039, 4, 2, 16, 4, 7, 4, 0, 0),
 (7041, 20, 7039, 2, 0, 6, 3, 4, 17, 1, 0),
 (7042, 34, 7039, 0, 0, 14, 2, 4, 8, 0, 0);
-INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
+INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
 (7043, 39, 7043, 0, 0, 9, 1, 6, 10, 2, 0),
 (7044, 16, 7043, 0, 0, 20, 7, 7, 8, 4, 0),
 (7045, 24, 7045, 1, 0, 16, 3, 7, 13, 1, 0),
@@ -7307,7 +7307,7 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTot
 (8252, 12, 8251, 0, 0, 10, 2, 2, 16, 4, 1),
 (8253, 41, 8251, 1, 1, 8, 2, 5, 11, 3, 0),
 (8254, 42, 8251, 0, 0, 6, 2, 1, 6, 1, 0);
-INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `ClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
+INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubID`, `MatchID`, `ATTotalGoals`, `ATHalfTimeGoals`, `ATShots`, `ATShotsOnTarget`, `ATCorners`, `ATFouls`, `ATYellowCards`, `ATRedCards`) VALUES
 (8255, 31, 8251, 1, 1, 13, 3, 5, 11, 3, 0),
 (8256, 28, 8251, 0, 0, 8, 3, 2, 10, 1, 0),
 (8257, 13, 8257, 3, 2, 15, 7, 4, 16, 0, 0),
@@ -7936,7 +7936,7 @@ INSERT INTO `epl_clubs` (`ClubID`, `ClubName`) VALUES
 
 CREATE TABLE `epl_home_team_stats` (
   `HomeTeamStatID` int(11) NOT NULL,
-  `ClubID` int(11) NOT NULL,
+  `HomeClubID` int(11) NOT NULL,
   `MatchID` int(11) NOT NULL,
   `HTTotalGoals` int(11) NOT NULL,
   `HTHalfTimeGoals` int(11) NOT NULL,
@@ -7952,7 +7952,7 @@ CREATE TABLE `epl_home_team_stats` (
 -- Dumping data for table `epl_home_team_stats`
 --
 
-INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
+INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
 (1000, 1, 1000, 4, 2, 17, 14, 6, 13, 1, 0),
 (1001, 3, 1000, 4, 1, 17, 10, 7, 19, 1, 0),
 (1002, 5, 1000, 1, 1, 6, 3, 8, 15, 5, 1),
@@ -9153,9 +9153,9 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTot
 (2197, 6, 2196, 1, 1, 9, 4, 4, 12, 2, 0),
 (2198, 16, 2198, 3, 1, 11, 7, 3, 13, 0, 0),
 (2199, 25, 2199, 2, 1, 7, 5, 4, 10, 1, 0),
-(2200, 22, 2199, 1, 0, 22, 14, 12, 16, 2, 0),
-(2201, 3, 2199, 1, 1, 10, 5, 6, 7, 0, 0);
-INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
+(2200, 22, 2199, 1, 0, 22, 14, 12, 16, 2, 0);
+INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
+(2201, 3, 2199, 1, 1, 10, 5, 6, 7, 0, 0),
 (2202, 11, 2199, 1, 0, 10, 4, 7, 7, 0, 0),
 (2203, 8, 2199, 0, 0, 10, 6, 4, 12, 4, 1),
 (2204, 21, 2204, 0, 0, 6, 0, 5, 14, 2, 0),
@@ -10351,9 +10351,9 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTot
 (3394, 27, 3389, 1, 0, 23, 12, 19, 11, 0, 0),
 (3395, 33, 3389, 2, 0, 8, 4, 4, 5, 1, 0),
 (3396, 30, 3389, 3, 2, 8, 5, 2, 18, 2, 0),
-(3397, 16, 3397, 3, 1, 7, 7, 2, 7, 2, 0),
-(3398, 32, 3397, 3, 2, 8, 4, 7, 14, 1, 0);
-INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
+(3397, 16, 3397, 3, 1, 7, 7, 2, 7, 2, 0);
+INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
+(3398, 32, 3397, 3, 2, 8, 4, 7, 14, 1, 0),
 (3399, 16, 3399, 1, 0, 23, 10, 11, 10, 2, 0),
 (3400, 3, 3399, 1, 1, 19, 9, 5, 10, 1, 0),
 (3401, 10, 3399, 1, 0, 9, 2, 5, 18, 3, 0),
@@ -11547,10 +11547,10 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTot
 (4589, 21, 4587, 0, 0, 13, 9, 5, 7, 0, 0),
 (4590, 23, 4587, 3, 1, 10, 7, 5, 10, 0, 0),
 (4591, 2, 4587, 4, 3, 11, 5, 6, 13, 2, 0),
-(4592, 27, 4587, 2, 1, 14, 6, 8, 7, 3, 0),
+(4592, 27, 4587, 2, 1, 14, 6, 8, 7, 3, 0);
+INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
 (4593, 10, 4593, 1, 1, 19, 7, 6, 8, 0, 0),
-(4594, 4, 4593, 1, 1, 6, 5, 5, 17, 4, 0);
-INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
+(4594, 4, 4593, 1, 1, 6, 5, 5, 17, 4, 0),
 (4595, 26, 4593, 2, 1, 12, 12, 5, 17, 2, 0),
 (4596, 25, 4596, 0, 0, 11, 4, 7, 6, 1, 0),
 (4597, 36, 4596, 1, 0, 15, 7, 8, 11, 0, 0),
@@ -12740,10 +12740,10 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTot
 (5781, 20, 5779, 1, 1, 15, 10, 6, 9, 2, 0),
 (5782, 39, 5779, 3, 0, 12, 6, 7, 11, 0, 0),
 (5783, 24, 5779, 2, 0, 25, 9, 8, 8, 3, 0),
-(5784, 4, 5779, 1, 0, 22, 13, 12, 6, 1, 0),
+(5784, 4, 5779, 1, 0, 22, 13, 12, 6, 1, 0);
+INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
 (5785, 30, 5779, 2, 1, 20, 11, 9, 10, 3, 0),
-(5786, 3, 5786, 2, 2, 13, 8, 3, 10, 2, 0);
-INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
+(5786, 3, 5786, 2, 2, 13, 8, 3, 10, 2, 0),
 (5787, 17, 5786, 1, 0, 23, 18, 9, 7, 1, 0),
 (5788, 8, 5788, 0, 0, 14, 11, 10, 14, 2, 0),
 (5789, 16, 5789, 5, 1, 23, 17, 13, 9, 0, 0),
@@ -13942,10 +13942,10 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTot
 (6982, 8, 6978, 1, 0, 16, 5, 12, 9, 2, 1),
 (6983, 39, 6978, 1, 0, 10, 3, 5, 14, 2, 0),
 (6984, 17, 6978, 2, 0, 26, 11, 9, 9, 2, 0),
-(6985, 31, 6978, 0, 0, 11, 4, 3, 10, 2, 0),
+(6985, 31, 6978, 0, 0, 11, 4, 3, 10, 2, 0);
+INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
 (6986, 29, 6986, 1, 0, 14, 4, 6, 12, 1, 0),
-(6987, 24, 6986, 1, 0, 9, 2, 4, 8, 1, 0);
-INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
+(6987, 24, 6986, 1, 0, 9, 2, 4, 8, 1, 0),
 (6988, 41, 6988, 3, 1, 12, 4, 5, 12, 1, 0),
 (6989, 28, 6988, 0, 0, 5, 0, 3, 15, 3, 0),
 (6990, 34, 6988, 1, 0, 13, 2, 1, 13, 1, 0),
@@ -15147,10 +15147,10 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTot
 (8186, 17, 8186, 1, 0, 29, 5, 6, 7, 1, 0),
 (8187, 31, 8186, 1, 0, 15, 4, 3, 10, 5, 0),
 (8188, 19, 8188, 0, 0, 12, 1, 1, 10, 2, 0),
-(8189, 26, 8188, 3, 3, 11, 3, 5, 12, 2, 0),
+(8189, 26, 8188, 3, 3, 11, 3, 5, 12, 2, 0);
+INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
 (8190, 13, 8190, 5, 3, 21, 7, 4, 5, 0, 0),
-(8191, 42, 8191, 1, 0, 9, 2, 7, 7, 2, 0);
-INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `ClubID`, `MatchID`, `HTTotalGoals`, `HTHalfTimeGoals`, `HTShots`, `HTShotsOnTarget`, `HTCorners`, `HTFouls`, `HTYellowCards`, `HTRedCards`) VALUES
+(8191, 42, 8191, 1, 0, 9, 2, 7, 7, 2, 0),
 (8192, 29, 8191, 0, 0, 8, 0, 5, 9, 2, 0),
 (8193, 23, 8191, 1, 0, 8, 2, 10, 10, 0, 0),
 (8194, 8, 8191, 3, 1, 22, 7, 9, 8, 2, 0),
@@ -23843,7 +23843,7 @@ CREATE TABLE `epl_siteusers` (
 ALTER TABLE `epl_away_team_stats`
   ADD PRIMARY KEY (`AwayTeamStatID`),
   ADD KEY `fk_matchname` (`MatchID`),
-  ADD KEY `fk_awayclubid` (`ClubID`);
+  ADD KEY `fk_awayclubid` (`AwayClubID`);
 
 --
 -- Indexes for table `epl_clubs`
@@ -23857,7 +23857,7 @@ ALTER TABLE `epl_clubs`
 ALTER TABLE `epl_home_team_stats`
   ADD PRIMARY KEY (`HomeTeamStatID`),
   ADD KEY `fk_newmatchname` (`MatchID`),
-  ADD KEY `fk_clubId` (`ClubID`);
+  ADD KEY `fk_clubId` (`HomeClubID`);
 
 --
 -- Indexes for table `epl_matches`
@@ -23939,14 +23939,14 @@ ALTER TABLE `epl_siteusers`
 -- Constraints for table `epl_away_team_stats`
 --
 ALTER TABLE `epl_away_team_stats`
-  ADD CONSTRAINT `fk_awayclubid` FOREIGN KEY (`ClubID`) REFERENCES `epl_clubs` (`ClubID`),
+  ADD CONSTRAINT `fk_awayclubid` FOREIGN KEY (`AwayClubID`) REFERENCES `epl_clubs` (`ClubID`),
   ADD CONSTRAINT `fk_matchname` FOREIGN KEY (`MatchID`) REFERENCES `epl_matches` (`MatchID`);
 
 --
 -- Constraints for table `epl_home_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
-  ADD CONSTRAINT `fk_clubId` FOREIGN KEY (`ClubID`) REFERENCES `epl_clubs` (`ClubID`),
+  ADD CONSTRAINT `fk_clubId` FOREIGN KEY (`HomeClubID`) REFERENCES `epl_clubs` (`ClubID`),
   ADD CONSTRAINT `fk_newmatchname` FOREIGN KEY (`MatchID`) REFERENCES `epl_matches` (`MatchID`);
 
 --
