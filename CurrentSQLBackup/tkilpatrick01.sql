@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 04, 2021 at 07:32 PM
+-- Generation Time: Feb 05, 2021 at 11:06 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -7874,57 +7874,58 @@ INSERT INTO `epl_away_team_match_stats` (`AwayTeamStatID`, `MatchID`, `TotalGoal
 
 CREATE TABLE `epl_club_names` (
   `ClubID` int(11) NOT NULL,
-  `ClubName` varchar(255) NOT NULL
+  `ClubName` varchar(255) NOT NULL,
+  `ClubLogoURL` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `epl_club_names`
 --
 
-INSERT INTO `epl_club_names` (`ClubID`, `ClubName`) VALUES
-(1000, 'Charlton'),
-(1001, 'Manchester City'),
-(1002, 'Chelsea'),
-(1003, 'West Ham'),
-(1004, 'Coventry'),
-(1005, 'Middlesbrough'),
-(1006, 'Derby'),
-(1007, 'Southampton'),
-(1008, 'Leeds'),
-(1009, 'Everton'),
-(1010, 'Leicester'),
-(1011, 'Aston Villa'),
-(1012, 'Liverpool'),
-(1013, 'Bradford'),
-(1014, 'Sunderland'),
-(1015, 'Arsenal'),
-(1016, 'Tottenham'),
-(1017, 'Ipswich'),
-(1018, 'Manchester United'),
-(1019, 'Newcastle'),
-(1020, 'Blackburn'),
-(1021, 'Bolton'),
-(1022, 'Fulham'),
-(1023, 'West Brom'),
-(1024, 'Birmingham'),
-(1025, 'Wolves'),
-(1026, 'Portsmouth'),
-(1027, 'Norwich'),
-(1028, 'Crystal Palace'),
-(1029, 'Wigan'),
-(1030, 'Watford'),
-(1031, 'Reading'),
-(1032, 'Sheffield United'),
-(1033, 'Stoke'),
-(1034, 'Hull'),
-(1035, 'Burnley'),
-(1036, 'Blackpool'),
-(1037, 'QPR'),
-(1038, 'Swansea'),
-(1039, 'Cardiff'),
-(1040, 'Bournemouth'),
-(1041, 'Brighton'),
-(1042, 'Huddersfield');
+INSERT INTO `epl_club_names` (`ClubID`, `ClubName`, `ClubLogoURL`) VALUES
+(1000, 'Charlton', 'https://i.imgur.com/qrayYVm.png'),
+(1001, 'Manchester City', 'https://i.imgur.com/eAQYVvW.png'),
+(1002, 'Chelsea', 'https://i.imgur.com/GHyIMJ0.jpg'),
+(1003, 'West Ham', 'https://i.imgur.com/NnpKdv6.jpg'),
+(1004, 'Coventry', 'https://i.imgur.com/BGOfacM.jpg'),
+(1005, 'Middlesbrough', 'https://i.imgur.com/9xxDgws.png'),
+(1006, 'Derby', 'https://i.imgur.com/8Ke5eSv.jpg'),
+(1007, 'Southampton', 'https://i.imgur.com/XItjdG1.png'),
+(1008, 'Leeds', 'https://i.imgur.com/bWa76Vw.png'),
+(1009, 'Everton', 'https://i.imgur.com/el9t4P0.png'),
+(1010, 'Leicester', 'https://i.imgur.com/xPw5Zox.png'),
+(1011, 'Aston Villa', 'https://i.imgur.com/mbmoHRB.png'),
+(1012, 'Liverpool', 'https://i.imgur.com/VgDSAuj.jpg'),
+(1013, 'Bradford', 'https://i.imgur.com/64vrD23.png'),
+(1014, 'Sunderland', 'https://i.imgur.com/KusYi4e.png'),
+(1015, 'Arsenal', 'https://i.imgur.com/rWUEXBS.png'),
+(1016, 'Tottenham', 'https://i.imgur.com/en4oC8U.jpg'),
+(1017, 'Ipswich', 'https://i.imgur.com/6RHmlrr.png'),
+(1018, 'Manchester United', 'https://i.imgur.com/ocvI6Kk.jpg'),
+(1019, 'Newcastle', 'https://i.imgur.com/J3U6Yic.jpg'),
+(1020, 'Blackburn', 'https://i.imgur.com/IlLD2gZ.png'),
+(1021, 'Bolton', 'https://i.imgur.com/6PbhKLp.png'),
+(1022, 'Fulham', 'https://i.imgur.com/nFz6qgg.png'),
+(1023, 'West Brom', 'https://i.imgur.com/3RICf5m.png'),
+(1024, 'Birmingham', 'https://i.imgur.com/tShzx1R.png'),
+(1025, 'Wolves', 'https://i.imgur.com/woiCzh9.png'),
+(1026, 'Portsmouth', 'https://i.imgur.com/fWlIa6A.png'),
+(1027, 'Norwich', 'https://i.imgur.com/v1jtOqI.png'),
+(1028, 'Crystal Palace', 'https://i.imgur.com/FoHUZdk.png'),
+(1029, 'Wigan', 'https://i.imgur.com/BzOqlOc.png'),
+(1030, 'Watford', 'https://i.imgur.com/kn8zohR.png'),
+(1031, 'Reading', 'https://i.imgur.com/2uF1BdJ.png'),
+(1032, 'Sheffield United', 'https://i.imgur.com/e7q2e2t.png'),
+(1033, 'Stoke', 'https://i.imgur.com/YSpBndd.png'),
+(1034, 'Hull', 'https://i.imgur.com/8oGnnEg.png'),
+(1035, 'Burnley', 'https://i.imgur.com/fSYJDGL.png'),
+(1036, 'Blackpool', 'https://i.imgur.com/8AF15xN.png'),
+(1037, 'QPR', 'https://i.imgur.com/5hUJZm8.png'),
+(1038, 'Swansea', 'https://i.imgur.com/Rfo2U0q.png'),
+(1039, 'Cardiff', 'https://i.imgur.com/xFuNIY9.png'),
+(1040, 'Bournemouth', 'https://i.imgur.com/sXAA5o2.png'),
+(1041, 'Brighton', 'https://i.imgur.com/Sw7SeCB.png'),
+(1042, 'Huddersfield', 'https://i.imgur.com/xkZWnBz.png');
 
 -- --------------------------------------------------------
 
