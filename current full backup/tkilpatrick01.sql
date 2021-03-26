@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 24, 2021 at 08:21 AM
+-- Generation Time: Mar 26, 2021 at 05:38 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -7985,7 +7985,7 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubName`, `MatchID`, 
 (7884, 'Tottenham', 7884, 1, 1, 6, 3, 3, 14, 2, 1),
 (7885, 'West Ham', 7885, 0, 0, 7, 0, 3, 2, 0, 0),
 (7886, 'Liverpool', 7886, 1, 1, 12, 4, 2, 10, 1, 0),
-(7916, 'Chelsea', 7906, 4, 2, 5, 4, 10, 3, 1, 0);
+(7917, 'Chelsea', 7907, 4, 2, 5, 4, 10, 3, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -15967,7 +15967,7 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubName`, `MatchID`, 
 (7884, 'Arsenal', 7884, 2, 1, 13, 3, 6, 12, 1, 0),
 (7885, 'Manchester United', 7885, 1, 0, 15, 4, 6, 12, 4, 0),
 (7886, 'Wolves', 7886, 0, 0, 10, 5, 3, 17, 2, 0),
-(7936, 'Arsenal', 7906, 4, 2, 5, 4, 10, 3, 1, 0);
+(7937, 'Arsenal', 7907, 5, 2, 8, 6, 10, 3, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -23887,7 +23887,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (7884, '2020-2021', '2021-03-14', '16:30:00', 'M Oliver', 'Admin - flat file import'),
 (7885, '2020-2021', '2021-03-14', '19:15:00', 'M. Atkinson', 'Admin - flat file import'),
 (7886, '2020-2021', '2021-03-15', '20:00:00', 'C. Pawson', 'Admin - flat file import'),
-(7906, '2020-2021', '2021-03-21', '18:00:00', 'R. Harris', '492dd3-816c61-f89f93-e14f5f-e1566b');
+(7907, '2020-2021', '2021-03-20', '10:00:00', 'R. Harris', '492dd3-816c61-f89f93-e14f5f-e1566b');
 
 -- --------------------------------------------------------
 
@@ -23911,7 +23911,10 @@ INSERT INTO `epl_match_edits` (`EditID`, `MatchID`, `EditedByUserID`, `EditDescr
 (21, 7902, '50000', 'Match Deleted', '2021-03-22 18:06:47'),
 (22, 7904, '50000', 'Match Deleted', '2021-03-22 18:07:07'),
 (23, 7903, '50000', 'Match Deleted', '2021-03-22 18:07:44'),
-(24, 7905, '50000', 'Match Deleted', '2021-03-22 18:28:45');
+(24, 7905, '50000', 'Match Deleted', '2021-03-22 18:28:45'),
+(25, 7907, '492dd3-816c61-f89f93-e14f5f-e1566b', 'Testing API', '2021-03-26 15:38:09'),
+(26, 7908, '50000', 'Match Deleted', '2021-03-26 16:57:40'),
+(27, 7906, '50000', 'Match Deleted', '2021-03-26 16:58:01');
 
 -- --------------------------------------------------------
 
@@ -23930,7 +23933,7 @@ CREATE TABLE `epl_referees` (
 
 INSERT INTO `epl_referees` (`RefereeID`, `RefereeName`) VALUES
 (100, 'R. Harris'),
-(103, 'A. DUrso'),
+(103, 'A. Durso'),
 (109, 'S. Lodge'),
 (114, 'A. Hall'),
 (116, 'F. Taylor'),
@@ -23995,8 +23998,7 @@ INSERT INTO `epl_referees` (`RefereeID`, `RefereeName`) VALUES
 (239, 'T. Robinson'),
 (240, 'R. Jones'),
 (241, 'S. Scott'),
-(242, 'D. England'),
-(243, 'T. Kilpatrick');
+(242, 'D. England');
 
 -- --------------------------------------------------------
 
@@ -24034,8 +24036,7 @@ INSERT INTO `epl_seasons` (`SeasonID`, `SeasonYears`) VALUES
 (27, '2017-2018'),
 (28, '2018-2019'),
 (29, '2019-2020'),
-(30, '2020-2021'),
-(31, '2021-2022');
+(30, '2020-2021');
 
 -- --------------------------------------------------------
 
@@ -24151,43 +24152,43 @@ ALTER TABLE `epl_api_users`
 -- AUTO_INCREMENT for table `epl_away_team_stats`
 --
 ALTER TABLE `epl_away_team_stats`
-  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7917;
+  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7919;
 
 --
 -- AUTO_INCREMENT for table `epl_clubs`
 --
 ALTER TABLE `epl_clubs`
-  MODIFY `ClubID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=544;
+  MODIFY `ClubID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=545;
 
 --
 -- AUTO_INCREMENT for table `epl_home_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
-  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7937;
+  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7939;
 
 --
 -- AUTO_INCREMENT for table `epl_matches`
 --
 ALTER TABLE `epl_matches`
-  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7907;
+  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7909;
 
 --
 -- AUTO_INCREMENT for table `epl_match_edits`
 --
 ALTER TABLE `epl_match_edits`
-  MODIFY `EditID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `EditID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `epl_referees`
 --
 ALTER TABLE `epl_referees`
-  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=244;
+  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
 
 --
 -- AUTO_INCREMENT for table `epl_seasons`
 --
 ALTER TABLE `epl_seasons`
-  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `epl_site_users`
