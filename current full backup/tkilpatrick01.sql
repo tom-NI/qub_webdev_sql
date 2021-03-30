@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 26, 2021 at 05:38 PM
+-- Generation Time: Mar 30, 2021 at 07:44 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -65,7 +65,8 @@ CREATE TABLE `epl_api_users` (
 
 INSERT INTO `epl_api_users` (`id`, `UserFirstName`, `UserSecondName`, `UserEmail`, `UserKey`, `OrganisationName`) VALUES
 (1000, 'Thomas', 'Kilpatrick', 'tom7182@outlook.com', '492dd3-816c61-f89f93-e14f5f-e1566b', 'epl_main_site'),
-(1002, 'Thomas', 'Kilpatrick', 'masterchef7182@gmail.com', '7939a1-de6d87-3d404c-b77fb5-4826ed', 'personal');
+(1002, 'Thomas', 'Kilpatrick', 'masterchef7182@gmail.com', '7939a1-de6d87-3d404c-b77fb5-4826ed', 'personal'),
+(1003, 'Chantelle', 'Kilpatrick', 'chantelle.catherwood@yahoo.com', 'f218ca-74a936-6bab52-610081-aba286', 'kilpat@');
 
 -- --------------------------------------------------------
 
@@ -24146,7 +24147,7 @@ ALTER TABLE `epl_admins`
 -- AUTO_INCREMENT for table `epl_api_users`
 --
 ALTER TABLE `epl_api_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1003;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1004;
 
 --
 -- AUTO_INCREMENT for table `epl_away_team_stats`
