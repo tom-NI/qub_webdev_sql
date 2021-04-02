@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 30, 2021 at 07:44 AM
+-- Generation Time: Apr 02, 2021 at 03:22 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -65,8 +65,7 @@ CREATE TABLE `epl_api_users` (
 
 INSERT INTO `epl_api_users` (`id`, `UserFirstName`, `UserSecondName`, `UserEmail`, `UserKey`, `OrganisationName`) VALUES
 (1000, 'Thomas', 'Kilpatrick', 'tom7182@outlook.com', '492dd3-816c61-f89f93-e14f5f-e1566b', 'epl_main_site'),
-(1002, 'Thomas', 'Kilpatrick', 'masterchef7182@gmail.com', '7939a1-de6d87-3d404c-b77fb5-4826ed', 'personal'),
-(1003, 'Chantelle', 'Kilpatrick', 'chantelle.catherwood@yahoo.com', 'f218ca-74a936-6bab52-610081-aba286', 'kilpat@');
+(1007, 'Thomas', 'Kilpatrick', 'masterchef7182@gmail.com', 'ca8035-dfaba1-0bea88-eacae9-536fea', 'testing_again');
 
 -- --------------------------------------------------------
 
@@ -7985,8 +7984,7 @@ INSERT INTO `epl_away_team_stats` (`AwayTeamStatID`, `AwayClubName`, `MatchID`, 
 (7883, 'Sheffield United', 7883, 0, 0, 1, 0, 1, 9, 2, 0),
 (7884, 'Tottenham', 7884, 1, 1, 6, 3, 3, 14, 2, 1),
 (7885, 'West Ham', 7885, 0, 0, 7, 0, 3, 2, 0, 0),
-(7886, 'Liverpool', 7886, 1, 1, 12, 4, 2, 10, 1, 0),
-(7917, 'Chelsea', 7907, 4, 2, 5, 4, 10, 3, 1, 0);
+(7886, 'Liverpool', 7886, 1, 1, 12, 4, 2, 10, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -15967,8 +15965,7 @@ INSERT INTO `epl_home_team_stats` (`HomeTeamStatID`, `HomeClubName`, `MatchID`, 
 (7883, 'Leicester', 7883, 5, 1, 19, 10, 9, 10, 0, 0),
 (7884, 'Arsenal', 7884, 2, 1, 13, 3, 6, 12, 1, 0),
 (7885, 'Manchester United', 7885, 1, 0, 15, 4, 6, 12, 4, 0),
-(7886, 'Wolves', 7886, 0, 0, 10, 5, 3, 17, 2, 0),
-(7937, 'Arsenal', 7907, 5, 2, 8, 6, 10, 3, 1, 0);
+(7886, 'Wolves', 7886, 0, 0, 10, 5, 3, 17, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -23887,8 +23884,7 @@ INSERT INTO `epl_matches` (`MatchID`, `SeasonYears`, `MatchDate`, `KickOffTime`,
 (7883, '2020-2021', '2021-03-14', '14:00:00', 'P. Bankes', 'Admin - flat file import'),
 (7884, '2020-2021', '2021-03-14', '16:30:00', 'M Oliver', 'Admin - flat file import'),
 (7885, '2020-2021', '2021-03-14', '19:15:00', 'M. Atkinson', 'Admin - flat file import'),
-(7886, '2020-2021', '2021-03-15', '20:00:00', 'C. Pawson', 'Admin - flat file import'),
-(7907, '2020-2021', '2021-03-20', '10:00:00', 'R. Harris', '492dd3-816c61-f89f93-e14f5f-e1566b');
+(7886, '2020-2021', '2021-03-15', '20:00:00', 'C. Pawson', 'Admin - flat file import');
 
 -- --------------------------------------------------------
 
@@ -23915,7 +23911,29 @@ INSERT INTO `epl_match_edits` (`EditID`, `MatchID`, `EditedByUserID`, `EditDescr
 (24, 7905, '50000', 'Match Deleted', '2021-03-22 18:28:45'),
 (25, 7907, '492dd3-816c61-f89f93-e14f5f-e1566b', 'Testing API', '2021-03-26 15:38:09'),
 (26, 7908, '50000', 'Match Deleted', '2021-03-26 16:57:40'),
-(27, 7906, '50000', 'Match Deleted', '2021-03-26 16:58:01');
+(27, 7906, '50000', 'Match Deleted', '2021-03-26 16:58:01'),
+(28, 7907, '492dd3-816c61-f89f93-e14f5f-e1566b', 'Testing API', '2021-03-31 10:36:07'),
+(29, 7909, '492dd3-816c61-f89f93-e14f5f-e1566b', 'Testing API', '2021-03-31 10:36:58'),
+(30, 7909, '50001', 'Match Deleted', '2021-03-31 15:55:34'),
+(31, 7910, '492dd3-816c61-f89f93-e14f5f-e1566b', 'checking return codes debugging', '2021-04-01 07:59:10'),
+(32, 7910, '492dd3-816c61-f89f93-e14f5f-e1566b', 'checking return codes debugging', '2021-04-01 08:00:15'),
+(33, 7910, '492dd3-816c61-f89f93-e14f5f-e1566b', 'checking return codes debugging', '2021-04-01 08:07:52'),
+(34, 7910, '492dd3-816c61-f89f93-e14f5f-e1566b', 'checking return codes debugging', '2021-04-01 08:19:32'),
+(35, 7911, '50000', 'Match Deleted', '2021-04-01 08:35:43'),
+(36, 7910, '492dd3-816c61-f89f93-e14f5f-e1566b', 'away team change (test)', '2021-04-01 09:12:30'),
+(37, 7910, '492dd3-816c61-f89f93-e14f5f-e1566b', 'checking return codes debugging', '2021-04-01 09:12:47'),
+(38, 7910, '492dd3-816c61-f89f93-e14f5f-e1566b', 'next edit match test', '2021-04-01 09:15:21'),
+(39, 7910, '492dd3-816c61-f89f93-e14f5f-e1566b', 'checking return codes debugging', '2021-04-01 09:15:35'),
+(40, 7910, '492dd3-816c61-f89f93-e14f5f-e1566b', 'another admin match change test', '2021-04-01 09:16:39'),
+(41, 7910, '50000', 'Match Deleted', '2021-04-01 09:49:32'),
+(42, 7907, '50000', 'Match Deleted', '2021-04-01 09:49:40'),
+(43, 7912, '492dd3-816c61-f89f93-e14f5f-e1566b', 'Away team wrong', '2021-04-01 16:13:02'),
+(44, 7912, '492dd3-816c61-f89f93-e14f5f-e1566b', 'Away team wrong', '2021-04-01 16:18:52'),
+(45, 7912, '492dd3-816c61-f89f93-e14f5f-e1566b', 'Away team corrected', '2021-04-01 16:23:35'),
+(46, 7912, '50000', 'Match Deleted', '2021-04-02 07:56:23'),
+(47, 7913, '50000', 'Match Deleted', '2021-04-02 07:57:01'),
+(48, 7915, '50000', 'Match Deleted', '2021-04-02 08:01:44'),
+(49, 7914, '50000', 'Match Deleted', '2021-04-02 08:01:53');
 
 -- --------------------------------------------------------
 
@@ -24059,7 +24077,7 @@ CREATE TABLE `epl_site_users` (
 --
 
 INSERT INTO `epl_site_users` (`id`, `UserName`, `UserSurname`, `UserEmail`, `UserPassword`, `UserEmailConfirmed`) VALUES
-(100000, 'Thomas', 'Kilpatrick', 'masterchef7182@gmail.com', '$2y$10$zXIpGkY3aF/3Ib37i27SbOjsS8JZm6.MDbys1MuKWBSeMyatJs8la', 1);
+(100009, 'Thomas', 'Kilpatrick', 'masterchef7182@gmail.com', '$2y$10$1yNxClNT/GS8RoNVj51CmOWjwzDW7LO0xZ26L6DL7asEng0TKRity', 1);
 
 --
 -- Indexes for dumped tables
@@ -24141,61 +24159,61 @@ ALTER TABLE `epl_site_users`
 -- AUTO_INCREMENT for table `epl_admins`
 --
 ALTER TABLE `epl_admins`
-  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50002;
+  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50003;
 
 --
 -- AUTO_INCREMENT for table `epl_api_users`
 --
 ALTER TABLE `epl_api_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1004;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1008;
 
 --
 -- AUTO_INCREMENT for table `epl_away_team_stats`
 --
 ALTER TABLE `epl_away_team_stats`
-  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7919;
+  MODIFY `AwayTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7926;
 
 --
 -- AUTO_INCREMENT for table `epl_clubs`
 --
 ALTER TABLE `epl_clubs`
-  MODIFY `ClubID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=545;
+  MODIFY `ClubID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=548;
 
 --
 -- AUTO_INCREMENT for table `epl_home_team_stats`
 --
 ALTER TABLE `epl_home_team_stats`
-  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7939;
+  MODIFY `HomeTeamStatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7946;
 
 --
 -- AUTO_INCREMENT for table `epl_matches`
 --
 ALTER TABLE `epl_matches`
-  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7909;
+  MODIFY `MatchID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7916;
 
 --
 -- AUTO_INCREMENT for table `epl_match_edits`
 --
 ALTER TABLE `epl_match_edits`
-  MODIFY `EditID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `EditID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `epl_referees`
 --
 ALTER TABLE `epl_referees`
-  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
+  MODIFY `RefereeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=252;
 
 --
 -- AUTO_INCREMENT for table `epl_seasons`
 --
 ALTER TABLE `epl_seasons`
-  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `SeasonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `epl_site_users`
 --
 ALTER TABLE `epl_site_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100001;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100010;
 
 --
 -- Constraints for dumped tables
