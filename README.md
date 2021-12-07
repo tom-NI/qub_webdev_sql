@@ -1,5 +1,4 @@
-# Queens University Belfast 
-## Masters Web Development Module - code repository.
+# Masters Web Development Module - code repository.
 
 This Repository is the SQL Database, exported from PHPMyAdmin as backups during the project.
 Please refer to the REST API and Website repositories for the remainder of this projects code.
